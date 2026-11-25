@@ -1,8 +1,5 @@
-# Introduction to Linux Topics
-This site contains material that is a shorter version of the official introductory course "Linux Systems Administration". Not all course material is included. 
-The material is subject to errors and omissions, as this material is not intended to be official in any capacity, however, I hope this may be useful as a quick reminder or review.
-
-Table of Content:
+# COMP2018
+## Table of Content:
 - [01 - Quick History of Unix and Linux](./01%20-%20Quick%20History%20of%20Unix%20and%20Linux.html)
 - [02 - Linux Distributions](./02%20-%20Linux%20Distributions.html)
 - [03 - Shell, Console, and Terminal](./03%20-%20Shell,%20Console,%20and%20Terminal.html)
@@ -18,7 +15,7 @@ Table of Content:
 - [13 - Bash Scripting](./13%20-%20Bash%20Scripting.html)
 - [14 - Desktop Environment and GUI](14%20-%20Desktop%20Environments%20and%20GUI.html)
 
-Assignments:
+## Assignments:
 - [Assignment 1 - Installing Linux](Assignments/Assignment%201%20-%20Installing%20Linux.html)
 - [Assignment 2 - The Command Line Interface](Assignments/Assignment%202%20-%20The%20Command%20Line%20Interface.html)
 - [Assignment 3 - Configuring NIC](Assignments/Assignment%203%20-%20Configuring%20NIC.html)
