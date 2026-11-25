@@ -1,240 +1,271 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
-	<title>02 - Linux Distributions</title>
-</head>
+				
+				<html>
+					<head>
+						<meta charset="UTF-8"/>
+						<meta name="viewport" content="width=device-width, initial-scale=1"/>
+						<style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
 
-<body>
-	<div class="exported-note">
-		<div class="exported-note-title">02 - Linux Distributions</div>
+code.hljs {
+  padding: 3px 5px;
+}
 
-		<style>
-			/* https://necolas.github.io/normalize.css/ */
-			html {
-				line-height: 1.15;
-				-ms-text-size-adjust: 100%;
-				-webkit-text-size-adjust: 100%
-			}
+/*
 
-			body {
-				margin: 0
-			}
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
 
-			article,
-			aside,
-			footer,
-			header,
-			nav,
-			section {
-				display: block
-			}
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
 
-			h1 {
-				font-size: 2em;
-				margin: .67em 0
-			}
+*/
 
-			hr {
-				box-sizing: content-box;
-				height: 0;
-				overflow: visible
-			}
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
 
-			pre {
-				font-family: monospace, monospace;
-				font-size: 1em
-			}
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
 
-			a {
-				background-color: transparent;
-				-webkit-text-decoration-skip: objects
-			}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
 
-			b,
-			strong {
-				font-weight: bolder
-			}
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
 
-			small {
-				font-size: 80%
-			}
+.hljs-literal {
+  color: #0184bb;
+}
 
-			img {
-				border-style: none
-			}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
 
-			body {
-				font-size: 15px;
-				color: #32373F;
-				word-wrap: break-word;
-				line-height: 1.6em;
-				background-color: #ffffff;
-				font-family: 'Avenir Next', 'Avenir', 'Arial', sans-serif;
-				padding-bottom: 0px;
-				padding-top: 0px;
-			}
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
 
-			kbd {
-				border: 1px solid rgb(220, 220, 220);
-				box-shadow: inset 0 -1px 0 rgb(220, 220, 220);
-				padding: 2px 4px;
-				border-radius: 3px;
-				background-color: rgb(243, 243, 243);
-			}
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
 
-			::-webkit-scrollbar {
-				width: 7px;
-				height: 7px;
-			}
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
 
-			::-webkit-scrollbar-corner {
-				background: none;
-			}
+.hljs-emphasis {
+  font-style: italic;
+}
 
-			::-webkit-scrollbar-track {
-				border: none;
-			}
+.hljs-strong {
+  font-weight: bold;
+}
 
-			::-webkit-scrollbar-thumb {
-				background: rgba(100, 100, 100, 0.3);
-				border-radius: 5px;
-			}
+.hljs-link {
+  text-decoration: underline;
+}</style>
+						<title>02 - Linux Distributions</title>
+					</head>
+					<body>
+						<div class="exported-note"><div class="exported-note-title">02 - Linux Distributions</div>
 
-			::-webkit-scrollbar-track:hover {
-				background: rgba(0, 0, 0, 0.1);
-			}
+<style>
+		/* https://necolas.github.io/normalize.css/ */
+		html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+		article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}
+		pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
+		b,strong{font-weight:bolder}small{font-size:80%}img{border-style:none}
 
-			::-webkit-scrollbar-thumb:hover {
-				background: rgba(100, 100, 100, 0.7);
-			}
+		body {
+			font-size: 15px;
+			color: #32373F;
+			word-wrap: break-word;
+			line-height: 1.6em;
+			background-color: #ffffff;
+			font-family: 'Avenir Next', 'Avenir', 'Arial', sans-serif;
+			padding-bottom: 0px;
+			padding-top: 0px;
+		}
+		kbd {
+			border: 1px solid rgb(220, 220, 220);
+			box-shadow: inset 0 -1px 0 rgb(220, 220, 220);
+			padding: 2px 4px;
+			border-radius: 3px;
+			background-color: rgb(243, 243, 243);
+		}
 
+		:root {
+			--scrollbar-size: 7px;
+		}
 
+		::-webkit-scrollbar {
+			width: var(--scrollbar-size);
+			height: var(--scrollbar-size);
+		}
+		::-webkit-scrollbar-thumb {
+			border-radius: calc(var(--scrollbar-size) / 2);
+		}
+		::-webkit-scrollbar-corner {
+			background: none;
+		}
+		::-webkit-scrollbar-track {
+			border: none;
+		}
+		::-webkit-scrollbar-thumb {
+			background: rgba(50, 55, 63, 0.54); 
+		}
+		::-webkit-scrollbar-track:hover {
+			background: rgba(0, 0, 0, 0.1); 
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(50, 55, 63, 0.63); 
+		}
 
-			/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
+		
 
-			#rendered-md>h1:first-child,
-			#rendered-md>h2:first-child,
-			#rendered-md>h3:first-child,
-			#rendered-md>h4:first-child,
-			#rendered-md>ul:first-child,
-			#rendered-md>ol:first-child,
-			#rendered-md>table:first-child,
-			#rendered-md>blockquote:first-child,
-			#rendered-md>img:first-child,
-			#rendered-md>p:first-child {
-				margin-top: 0;
-				padding-top: 0;
-			}
+		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
 
-			p,
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			ul,
-			table {
-				margin-top: .6em;
-				margin-bottom: 1.35em;
+		#rendered-md > h1:first-child,
+		#rendered-md > h2:first-child,
+		#rendered-md > h3:first-child,
+		#rendered-md > h4:first-child,
+		#rendered-md > ul:first-child,
+		#rendered-md > ol:first-child,
+		#rendered-md > table:first-child,
+		#rendered-md > blockquote:first-child,
+		#rendered-md > img:first-child,
+		#rendered-md > p:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		
+		p, h1, h2, h3, h4, h5, h6, ul, table {
+			margin-top: .6em;
+			margin-bottom: 1.35em;
 
-				/*
+			/*
 				Adds support for RTL text in the note body. It automatically detects the direction using the content.
 				Issue: https://github.com/laurent22/joplin/issues/3991
 			*/
-				unicode-bidi: plaintext;
-			}
+			unicode-bidi: plaintext;
+		}
 
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			ul,
-			table {
-				margin-bottom: 0.65em;
-			}
+		h1, h2, h3, h4, h5, h6, ul, table {
+			margin-bottom: 0.65em;
+		}
 
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				line-height: 1.5em;
-			}
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1.5em;
+		}
+		h1 {
+			font-size: 1.5em;
+			font-weight: bold;
+			border-bottom: 1px solid #dddddd;
+			padding-bottom: .3em;
+		}
+		h2 {
+			font-size: 1.3em;
+			font-weight: bold;
+			padding-bottom: .1em; */
+		}
+		h3 {
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+		h4, h5, h6 {
+			font-size: 1em;
+			font-weight: bold;
+		}
 
-			h1 {
-				font-size: 1.5em;
-				font-weight: bold;
-				border-bottom: 1px solid #dddddd;
-				padding-bottom: .3em;
-			}
+		.exported-note-title {
+			font-size: 2em;
+			font-weight: bold;
+			margin-bottom: 0.8em;
+			line-height: 1.5em;
+			padding-bottom: .35em;
+			border-bottom: 1px solid #dddddd;
+		}
 
-			h2 {
-				font-size: 1.3em;
-				font-weight: bold;
-				padding-bottom: .1em;
-				*/
-			}
+		a {
+			color: #155BDA;
+		}
+		ul, ol {
+			padding-left: 0;
+			margin-left: 1.7em;
+		}
+		li {
+			margin-bottom: .4em;
+		}
+		li p {
+			margin-top: 0.2em;
+			margin-bottom: 0;
+		}
 
-			h3 {
-				font-size: 1.1em;
-				font-weight: bold;
-			}
+		dt {
+			font-weight: bold;
+			margin-bottom: 0.25em;
+		}
 
-			h4,
-			h5,
-			h6 {
-				font-size: 1em;
-				font-weight: bold;
-			}
+		dd {
+			margin-inline-start: 2.5em;
+			margin-bottom: 0.5em;
+		}
 
-			.exported-note-title {
-				font-size: 2em;
-				font-weight: bold;
-				margin-bottom: 0.8em;
-				line-height: 1.5em;
-				padding-bottom: .35em;
-				border-bottom: 1px solid #dddddd;
-			}
-
-			a {
-				color: #155BDA;
-			}
-
-			ul,
-			ol {
-				padding-left: 0;
-				margin-left: 1.7em;
-			}
-
-			li {
-				margin-bottom: .4em;
-			}
-
-			li p {
-				margin-top: 0.2em;
-				margin-bottom: 0;
-			}
-
-			.resource-icon {
-				display: inline-block;
-				position: relative;
-				top: 0.3em;
-				text-decoration: none;
-				width: 1.2em;
-				height: 1.4em;
-				margin-right: 0.4em;
-				background-color: #155BDA;
-			}
-
-			/* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+		.resource-icon {
+			display: inline-block;
+			position: relative;
+			top: 0.3em;
+			text-decoration: none;
+			width: 1.2em;
+			height: 1.4em;
+			margin-right: 0.4em;
+			background-color:  #155BDA;
+		}
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
      * into the css classes below.
      * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
      * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
@@ -243,419 +274,539 @@
      * to prevent artifacts it is also necessary to include -webkit-mask-repeat: no-repeat;
      * on the following line
      * */
-			.fa-joplin {
-				/* Awesome Font file */
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M373.834 128C168.227 128 0 296.223 0 501.834v788.336C0 1495.778 168.227 1664 373.834 1664h788.336c205.608 0 373.83-168.222 373.83-373.83V501.834C1536 296.224 1367.778 128 1162.17 128zm397.222 205.431h417.424a7.132 7.132 0 0 1 7.132 7.133v132.552c0 4.461-3.619 8.073-8.077 8.073h-57.23c-24.168 0-43.768 19.338-44.284 43.374v2.377h-.017v136.191h-.053l-.466 509.375c-5.02 77.667-39.222 149.056-96.324 201.046-60.28 54.834-141.948 85.017-229.962 85.017-12.45 0-25.208-.61-37.907-1.785-92.157-8.682-181.494-48.601-251.662-112.438-71.99-65.517-117.147-150.03-127.164-238-11.226-98.763 23.42-192.783 95.045-257.937 81.99-74.637 198.185-101.768 316.613-75.704 5.574 1.227 9.55 6.282 9.55 11.997v199.52c-.199 2.625-1.481 6.599-8.183 2.896-.663-.365-1.194-.511-1.653-.531-21.987-10.587-45.159-17.57-68.559-19.916-.38-.04-.757-.124-1.138-.163-.537-.048-1.034-.033-1.556-.075-4.13-.354-8.183-.517-12.203-.58-.87-.011-1.771-.127-2.641-.127-.486 0-.951.05-1.437.057-1.464.011-2.886.115-4.33.163-2.76.102-5.497.211-8.182.448-.273.024-.547.07-.835.097-25.509 2.4-47.864 11.104-65.012 25.47-.954.802-1.974 1.53-2.9 2.36a1.34 1.34 0 0 1-.168.146c-23.96 21.8-34.881 53.872-30.726 90.316 4.62 40.737 26.94 81.156 62.841 113.823 35.908 32.67 80.335 52.977 125.113 57.186 35.118 3.36 66.547-3.919 89.899-20.461a97.255 97.255 0 0 0 9.365-7.501c2.925-2.661 5.569-5.5 8.086-8.416.3-.348.672-.673.975-1.024 8.253-9.864 14.222-21.067 17.996-33.148.639-2.034 1.051-4.148 1.564-6.227.381-1.563.81-3.106 1.112-4.693.555-2.784.923-5.632 1.253-8.49.086-.709.183-1.414.237-2.128.492-4.893.693-9.858.55-14.91h.013V521.623c-2.01-22.626-20.78-40.434-43.928-40.434h-57.23a8.071 8.071 0 0 1-8.077-8.073V340.564a7.132 7.132 0 0 1 7.136-7.133z'/></svg>");
-			}
+		.fa-joplin {
+			/* Awesome Font file */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M373.834 128C168.227 128 0 296.223 0 501.834v788.336C0 1495.778 168.227 1664 373.834 1664h788.336c205.608 0 373.83-168.222 373.83-373.83V501.834C1536 296.224 1367.778 128 1162.17 128zm397.222 205.431h417.424a7.132 7.132 0 0 1 7.132 7.133v132.552c0 4.461-3.619 8.073-8.077 8.073h-57.23c-24.168 0-43.768 19.338-44.284 43.374v2.377h-.017v136.191h-.053l-.466 509.375c-5.02 77.667-39.222 149.056-96.324 201.046-60.28 54.834-141.948 85.017-229.962 85.017-12.45 0-25.208-.61-37.907-1.785-92.157-8.682-181.494-48.601-251.662-112.438-71.99-65.517-117.147-150.03-127.164-238-11.226-98.763 23.42-192.783 95.045-257.937 81.99-74.637 198.185-101.768 316.613-75.704 5.574 1.227 9.55 6.282 9.55 11.997v199.52c-.199 2.625-1.481 6.599-8.183 2.896-.663-.365-1.194-.511-1.653-.531-21.987-10.587-45.159-17.57-68.559-19.916-.38-.04-.757-.124-1.138-.163-.537-.048-1.034-.033-1.556-.075-4.13-.354-8.183-.517-12.203-.58-.87-.011-1.771-.127-2.641-.127-.486 0-.951.05-1.437.057-1.464.011-2.886.115-4.33.163-2.76.102-5.497.211-8.182.448-.273.024-.547.07-.835.097-25.509 2.4-47.864 11.104-65.012 25.47-.954.802-1.974 1.53-2.9 2.36a1.34 1.34 0 0 1-.168.146c-23.96 21.8-34.881 53.872-30.726 90.316 4.62 40.737 26.94 81.156 62.841 113.823 35.908 32.67 80.335 52.977 125.113 57.186 35.118 3.36 66.547-3.919 89.899-20.461a97.255 97.255 0 0 0 9.365-7.501c2.925-2.661 5.569-5.5 8.086-8.416.3-.348.672-.673.975-1.024 8.253-9.864 14.222-21.067 17.996-33.148.639-2.034 1.051-4.148 1.564-6.227.381-1.563.81-3.106 1.112-4.693.555-2.784.923-5.632 1.253-8.49.086-.709.183-1.414.237-2.128.492-4.893.693-9.858.55-14.91h.013V521.623c-2.01-22.626-20.78-40.434-43.928-40.434h-57.23a8.071 8.071 0 0 1-8.077-8.073V340.564a7.132 7.132 0 0 1 7.136-7.133z'/></svg>");
+		}
+		.fa-file-image {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-128-448v320H256v-192l192-192 128 128 384-384zm-832-192c-106 0-192-86-192-192s86-192 192-192 192 86 192 192-86 192-192 192z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-pdf {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-514-593c25 20 53 38 84 56 42-5 81-7 117-7 67 0 152 8 177 49 7 10 13 28 2 52-1 1-2 3-3 4v1c-3 18-18 38-71 38-64 0-161-29-245-73-139 15-285 46-392 83-103 176-182 262-242 262-10 0-19-2-28-7l-24-12c-3-1-4-3-6-5-5-5-9-16-6-36 10-46 64-123 188-188 8-5 18-2 23 6 1 1 2 3 2 4 31-51 67-116 107-197 45-90 80-178 104-262-32-109-42-221-24-287 7-25 22-40 42-40h22c15 0 27 5 35 15 12 14 15 36 9 68-1 3-2 6-4 8 1 3 1 5 1 8v30c-1 63-2 123-14 192 35 105 87 190 146 238zm-576 411c30-14 73-57 137-158-75 58-122 124-137 158zm398-920c-10 28-10 76-2 132 3-16 5-31 7-44 2-17 5-31 7-43 1-3 2-5 4-8-1-1-1-3-2-5-1-18-7-29-13-36 0 2-1 3-1 4zm-124 661c88-35 186-63 284-81-10-8-20-15-29-23-49-43-93-103-127-176-19 61-47 126-83 197-15 28-30 56-45 83zm646-16c-5-5-31-24-140-24 49 18 94 28 124 28 9 0 14 0 18-1 0-1-1-2-2-3z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-word {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM233 768v107h70l164 661h159l128-485c5-15 8-30 10-46 1-8 2-16 2-24h4l3 24c3 14 4 30 9 46l128 485h159l164-661h70V768h-300v107h90l-99 438c-4 16-6 33-7 46l-2 21h-4c0-6-2-14-3-21-3-13-5-30-9-46L825 768H711l-144 545c-4 16-5 33-8 46l-4 21h-4l-2-21c-1-13-3-30-7-46l-99-438h90V768H233z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-powerpoint {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-992-234v106h327v-106h-93v-167h137c43 0 82-2 118-15 90-31 146-124 146-233s-54-193-137-228c-38-15-84-19-130-19H416v107h92v555h-92zm353-280H650V882h120c35 0 62 6 83 18 36 21 56 62 56 115 0 56-20 99-62 120-21 10-47 15-78 15z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-excel {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-979-234v106h281v-106h-75l103-161c12-19 18-34 21-34h2c1 4 3 7 5 10 4 8 10 14 17 24l107 161h-76v106h291v-106h-68l-192-273 195-282h67V768H828v107h74l-103 159c-12 19-21 34-21 33h-2c-1-4-3-7-5-10-4-7-9-14-17-23L648 875h76V768H434v107h68l189 272-194 283h-68z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-audio {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM620 850c12 5 20 17 20 30v544c0 13-8 25-20 30-4 1-8 2-12 2-8 0-16-3-23-9l-166-167H288c-18 0-32-14-32-32v-192c0-18 14-32 32-32h131l166-167c10-9 23-12 35-7zm417 689c19 0 37-8 50-24 83-102 129-231 129-363s-46-261-129-363c-22-28-63-32-90-10-28 23-32 63-9 91 65 80 100 178 100 282s-35 202-100 282c-23 28-19 68 9 90 12 10 26 15 40 15zm-211-148c17 0 34-7 47-20 56-60 87-137 87-219s-31-159-87-219c-24-26-65-27-91-3-25 24-27 65-2 91 33 36 52 82 52 131s-19 95-52 131c-25 26-23 67 2 91 13 11 29 17 44 17z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-video {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM768 768c70 0 128 58 128 128v384c0 70-58 128-128 128H384c-70 0-128-58-128-128V896c0-70 58-128 128-128h384zm492 2c12 5 20 17 20 30v576c0 13-8 25-20 30-4 1-8 2-12 2-8 0-17-3-23-9l-265-266v-90l265-266c6-6 15-9 23-9 4 0 8 1 12 2z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-archive {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M640 384V256H512v128h128zm128 128V384H640v128h128zM640 640V512H512v128h128zm128 128V640H640v128h128zm700-388c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H768v128H640V128H128v1536h1280zM781 943c85 287 107 349 107 349 5 17 8 34 8 52 0 111-108 192-256 192s-256-81-256-192c0-18 3-35 8-52 0 0 21-62 120-396V768h128v128h79c29 0 54 19 62 47zm-141 465c71 0 128-29 128-64s-57-64-128-64-128 29-128 64 57 64 128 64z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-code {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM480 768c11-14 31-17 45-6l51 38c14 11 17 31 6 45l-182 243 182 243c11 14 8 34-6 45l-51 38c-14 11-34 8-45-6l-226-301c-8-11-8-27 0-38zm802 301c8 11 8 27 0 38l-226 301c-11 14-31 17-45 6l-51-38c-14-11-17-31-6-45l182-243-182-243c-11-14-8-34 6-45l51-38c14-11 34-8 45 6zm-620 461c-18-3-29-20-26-37l138-831c3-18 20-29 37-26l63 10c18 3 29 20 26 37l-138 831c-3 18-20 29-37 26z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-alt, .fa-file-csv {
+      /* fork-awesome doesn't have csv so we use the text icon */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM384 800c0-18 14-32 32-32h704c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64zm736 224c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704zm0 256c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		blockquote {
+			border-left: 4px solid rgb(220, 220, 220);
+			padding-left: 1.2em;
+			margin-left: 0;
+			opacity: 0.7;
+		}
 
-			.fa-file-image {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-128-448v320H256v-192l192-192 128 128 384-384zm-832-192c-106 0-192-86-192-192s86-192 192-192 192 86 192 192-86 192-192 192z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		.jop-tinymce table,
+		table {
+			text-align: left;
+			border-collapse: collapse;
+			border: 1px solid rgb(220, 220, 220);
+			background-color: #ffffff;
+		}
 
-			.fa-file-pdf {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-514-593c25 20 53 38 84 56 42-5 81-7 117-7 67 0 152 8 177 49 7 10 13 28 2 52-1 1-2 3-3 4v1c-3 18-18 38-71 38-64 0-161-29-245-73-139 15-285 46-392 83-103 176-182 262-242 262-10 0-19-2-28-7l-24-12c-3-1-4-3-6-5-5-5-9-16-6-36 10-46 64-123 188-188 8-5 18-2 23 6 1 1 2 3 2 4 31-51 67-116 107-197 45-90 80-178 104-262-32-109-42-221-24-287 7-25 22-40 42-40h22c15 0 27 5 35 15 12 14 15 36 9 68-1 3-2 6-4 8 1 3 1 5 1 8v30c-1 63-2 123-14 192 35 105 87 190 146 238zm-576 411c30-14 73-57 137-158-75 58-122 124-137 158zm398-920c-10 28-10 76-2 132 3-16 5-31 7-44 2-17 5-31 7-43 1-3 2-5 4-8-1-1-1-3-2-5-1-18-7-29-13-36 0 2-1 3-1 4zm-124 661c88-35 186-63 284-81-10-8-20-15-29-23-49-43-93-103-127-176-19 61-47 126-83 197-15 28-30 56-45 83zm646-16c-5-5-31-24-140-24 49 18 94 28 124 28 9 0 14 0 18-1 0-1-1-2-2-3z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		.jop-tinymce table td, .jop-tinymce table th,
+		table td, th {
+			text-align: left;
+			padding: .5em 1em .5em 1em;
+			font-size: 15;
+			color: #32373F;
+			font-family: 'Avenir Next', 'Avenir', 'Arial', sans-serif;
+		}
 
-			.fa-file-word {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM233 768v107h70l164 661h159l128-485c5-15 8-30 10-46 1-8 2-16 2-24h4l3 24c3 14 4 30 9 46l128 485h159l164-661h70V768h-300v107h90l-99 438c-4 16-6 33-7 46l-2 21h-4c0-6-2-14-3-21-3-13-5-30-9-46L825 768H711l-144 545c-4 16-5 33-8 46l-4 21h-4l-2-21c-1-13-3-30-7-46l-99-438h90V768H233z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		.jop-tinymce table td,
+		table td {
+			border: 1px solid rgb(220, 220, 220);
+		}
 
-			.fa-file-powerpoint {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-992-234v106h327v-106h-93v-167h137c43 0 82-2 118-15 90-31 146-124 146-233s-54-193-137-228c-38-15-84-19-130-19H416v107h92v555h-92zm353-280H650V882h120c35 0 62 6 83 18 36 21 56 62 56 115 0 56-20 99-62 120-21 10-47 15-78 15z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		.jop-tinymce table th,
+		table th {
+			border: 1px solid rgb(220, 220, 220);
+			border-bottom: 2px solid rgb(220, 220, 220);
+			background-color: rgb(247, 247, 247);
+		}
 
-			.fa-file-excel {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-979-234v106h281v-106h-75l103-161c12-19 18-34 21-34h2c1 4 3 7 5 10 4 8 10 14 17 24l107 161h-76v106h291v-106h-68l-192-273 195-282h67V768H828v107h74l-103 159c-12 19-21 34-21 33h-2c-1-4-3-7-5-10-4-7-9-14-17-23L648 875h76V768H434v107h68l189 272-194 283h-68z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		.jop-tinymce table tr:nth-child(even),
+		table:has(thead) tr:nth-child(even) {
+			background-color: rgb(247, 247, 247);
+		}
 
-			.fa-file-audio {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM620 850c12 5 20 17 20 30v544c0 13-8 25-20 30-4 1-8 2-12 2-8 0-16-3-23-9l-166-167H288c-18 0-32-14-32-32v-192c0-18 14-32 32-32h131l166-167c10-9 23-12 35-7zm417 689c19 0 37-8 50-24 83-102 129-231 129-363s-46-261-129-363c-22-28-63-32-90-10-28 23-32 63-9 91 65 80 100 178 100 282s-35 202-100 282c-23 28-19 68 9 90 12 10 26 15 40 15zm-211-148c17 0 34-7 47-20 56-60 87-137 87-219s-31-159-87-219c-24-26-65-27-91-3-25 24-27 65-2 91 33 36 52 82 52 131s-19 95-52 131c-25 26-23 67 2 91 13 11 29 17 44 17z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		.jop-tinymce table tr:hover,
+		table tr:hover {
+			background-color: #e5e5e5;
+		}
 
-			.fa-file-video {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM768 768c70 0 128 58 128 128v384c0 70-58 128-128 128H384c-70 0-128-58-128-128V896c0-70 58-128 128-128h384zm492 2c12 5 20 17 20 30v576c0 13-8 25-20 30-4 1-8 2-12 2-8 0-17-3-23-9l-265-266v-90l265-266c6-6 15-9 23-9 4 0 8 1 12 2z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		hr {
+			border: none;
+			border-bottom: 2px solid #dddddd;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		.inline-code,
+		.mce-content-body code {
+			border: 1px solid rgb(220, 220, 220);
+			background-color: rgb(243, 243, 243);
+			padding-right: .2em;
+			padding-left: .2em;
+			border-radius: .25em;
+			color: rgb(0,0,0);
+			font-size: .9em;
+		}
 
-			.fa-file-archive {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M640 384V256H512v128h128zm128 128V384H640v128h128zM640 640V512H512v128h128zm128 128V640H640v128h128zm700-388c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H768v128H640V128H128v1536h1280zM781 943c85 287 107 349 107 349 5 17 8 34 8 52 0 111-108 192-256 192s-256-81-256-192c0-18 3-35 8-52 0 0 21-62 120-396V768h128v128h79c29 0 54 19 62 47zm-141 465c71 0 128-29 128-64s-57-64-128-64-128 29-128 64 57 64 128 64z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		.highlighted-keyword {
+			background-color: #F3B717;
+			color: black;
+		}
 
-			.fa-file-code {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM480 768c11-14 31-17 45-6l51 38c14 11 17 31 6 45l-182 243 182 243c11 14 8 34-6 45l-51 38c-14 11-34 8-45-6l-226-301c-8-11-8-27 0-38zm802 301c8 11 8 27 0 38l-226 301c-11 14-31 17-45 6l-51-38c-14-11-17-31-6-45l182-243-182-243c-11-14-8-34 6-45l51-38c14-11 34-8 45 6zm-620 461c-18-3-29-20-26-37l138-831c3-18 20-29 37-26l63 10c18 3 29 20 26 37l-138 831c-3 18-20 29-37 26z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+		
+	.not-loaded-resource img {
+		width: 1.15em;
+		height: 1.15em;
+		background: white;
+		padding: 2px !important;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px #000000aa;
+	}
 
-			.fa-file-alt,
-			.fa-file-csv {
-				/* fork-awesome doesn't have csv so we use the text icon */
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM384 800c0-18 14-32 32-32h704c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64zm736 224c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704zm0 256c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+	a.not-loaded-resource img {
+		margin-right: .2em;
+	}
 
-			.fa-file {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
+	a.not-loaded-resource {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
 
-			blockquote {
-				border-left: 4px solid rgb(220, 220, 220);
-				padding-left: 1.2em;
-				margin-left: 0;
-				opacity: 0.7;
-			}
 
-			.jop-tinymce table,
-			table {
-				text-align: left;
-				border-collapse: collapse;
-				border: 1px solid rgb(220, 220, 220);
-				background-color: #ffffff;
-			}
+		.md-checkbox input[type=checkbox]:checked {
+			opacity: 0.7;
+		}
 
-			.jop-tinymce table td,
-			.jop-tinymce table th,
-			table td,
-			th {
-				text-align: left;
-				padding: .5em 1em .5em 1em;
-				font-size: 15;
-				color: #32373F;
-				font-family: 'Avenir Next', 'Avenir', 'Arial', sans-serif;
-			}
+		.jop-tinymce ul.joplin-checklist .checked,
+		.md-checkbox .checkbox-label-checked {
+			opacity: 0.5;
+		}
 
-			.jop-tinymce table td,
-			table td {
-				border: 1px solid rgb(220, 220, 220);
-			}
+		.exported-note {
+			padding: 1em;
+		}
 
-			.jop-tinymce table th,
-			table th {
-				border: 1px solid rgb(220, 220, 220);
-				border-bottom: 2px solid rgb(220, 220, 220);
-				background-color: rgb(247, 247, 247);
-			}
+		.joplin-editable .joplin-source {
+			display: none;
+		}
 
-			.jop-tinymce table tr:nth-child(even),
-			table tr:nth-child(even) {
-				background-color: rgb(247, 247, 247);
-			}
+		mark {
+			background: #F7D26E;
+			color: black;
+		}
 
-			.jop-tinymce table tr:hover,
-			table tr:hover {
-				background-color: #e5e5e5;
-			}
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
 
-			hr {
-				border: none;
-				border-bottom: 2px solid #dddddd;
-			}
+		.mce-content-body {
+			/* Note: we give a bit more padding at the bottom, to allow scrolling past the end of the document */
+			padding: 5px 10px 10em 0;
+		}
 
-			img {
-				max-width: 100%;
-				height: auto;
-			}
-
-			.inline-code,
-			.mce-content-body code {
-				border: 1px solid rgb(220, 220, 220);
-				background-color: rgb(243, 243, 243);
-				padding-right: .2em;
-				padding-left: .2em;
-				border-radius: .25em;
-				color: rgb(0, 0, 0);
-				font-size: .9em;
-			}
-
-			.highlighted-keyword {
-				background-color: #F3B717;
-				color: black;
-			}
-
-			.not-loaded-resource img {
-				width: 1.15em;
-				height: 1.15em;
-				background: white;
-				padding: 2px !important;
-				border-radius: 2px;
-				box-shadow: 0 1px 3px #000000aa;
-			}
-
-			a.not-loaded-resource img {
-				margin-right: .2em;
-			}
-
-			a.not-loaded-resource {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-
-			.md-checkbox input[type=checkbox]:checked {
-				opacity: 0.7;
-			}
-
-			.jop-tinymce ul.joplin-checklist .checked,
-			.md-checkbox .checkbox-label-checked {
-				opacity: 0.5;
-			}
-
-			.exported-note {
-				padding: 1em;
-			}
-
-			.joplin-editable .joplin-source {
-				display: none;
-			}
-
-			mark {
-				background: #F7D26E;
-				color: black;
-			}
-
-			/* =============================================== */
-			/* For TinyMCE */
-			/* =============================================== */
-
-			.mce-content-body {
-				/* Note: we give a bit more padding at the bottom, to allow scrolling past the end of the document */
-				padding: 5px 10px 10em 0;
-			}
-
-			/*
+		/*
 		.mce-content-body code {
 			background-color: transparent;
 		}
 		*/
 
-			.mce-content-body [data-mce-selected=inline-boundary] {
-				background-color: transparent;
+		.mce-content-body [data-mce-selected=inline-boundary] {
+			background-color: transparent;
+		}
+
+		.mce-content-body .joplin-editable {
+			cursor: pointer !important;
+		}
+
+		.mce-content-body.mce-content-readonly {
+			opacity: 0.5;
+		}
+
+		/* We need that to make sure click events have the A has a target */
+		.katex a span {
+			pointer-events: none;
+		}
+
+		.media-player {
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		.media-player.media-pdf {
+			min-height: 35rem;
+			width: 100%;
+			max-width: 1000px;
+			margin: 0;
+			border: 0;
+			display: block;
+		}
+
+		/* Clear the CODE style if the element is within a joplin-editable block */
+		.mce-content-body .joplin-editable code {
+			border: none;
+			background: none;
+			padding: 0;
+			color: inherit;
+			font-size: inherit;
+		}
+
+		/* To make code blocks horizontally scrollable */
+		/* https://github.com/laurent22/joplin/issues/5740 */
+		pre.hljs {
+			overflow-x: auto;
+		}
+
+		.joplin-table-wrapper{
+			overflow-x: auto;
+			overflow-y: hidden;
+		}
+
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
+
+		@media print {
+			body {
+				height: auto !important;
 			}
 
-			.mce-content-body .joplin-editable {
-				cursor: pointer !important;
+			pre {
+				white-space: pre-wrap;
 			}
 
-			.mce-content-body.mce-content-readonly {
-				opacity: 0.5;
+			.code, .inline-code {
+				border: 1px solid #CBCBCB;
 			}
 
-			/* We need that to make sure click events have the A has a target */
-			.katex a span {
-				pointer-events: none;
-			}
-
-			.media-player {
-				width: 100%;
-				margin-top: 10px;
-			}
-
-			.media-player.media-pdf {
-				min-height: 35rem;
-				width: 100%;
-				max-width: 1000px;
-				margin: 0;
-				border: 0;
-				display: block;
-			}
-
-			/* Clear the CODE style if the element is within a joplin-editable block */
-			.mce-content-body .joplin-editable code {
-				border: none;
-				background: none;
-				padding: 0;
-				color: inherit;
-				font-size: inherit;
-			}
-
-			/* To make code blocks horizontally scrollable */
-			/* https://github.com/laurent22/joplin/issues/5740 */
-			pre.hljs {
-				overflow-x: auto;
-			}
-
-			.joplin-table-wrapper {
-				overflow-x: auto;
-				overflow-y: hidden;
-			}
-
-			/* =============================================== */
-			/* For TinyMCE */
-			/* =============================================== */
-
-			@media print {
-				body {
-					height: auto !important;
-				}
-
-				pre {
-					white-space: pre-wrap;
-				}
-
-				.code,
-				.inline-code {
-					border: 1px solid #CBCBCB;
-				}
-
-				#joplin-container-content {
-					/* The height of the content is set dynamically by JavaScript (in updateBodyHeight) to go
+			#joplin-container-content {
+				/* The height of the content is set dynamically by JavaScript (in updateBodyHeight) to go
 				   around various issues related to scrolling. However when printing we don't want this
 				   fixed size as that would crop the content. So we set it to auto here. "important" is
 				   needed to override the style set by JavaScript at the element-level. */
-					height: auto !important;
-				}
+				height: auto !important;
 			}
+		}
+	
 
+				.joplin-frontmatter-rendered {
+					margin-bottom: 1em;
+				}
+				.joplin-frontmatter-rendered pre.hljs {
+					margin: 0;
+					border-radius: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+				}
+				.joplin-frontmatter-marker {
+					margin: 0;
+					border: none;
+					border-top: 2px solid var(--joplin-divider-color, #ccc);
+				}
+			
 
-			/*
+				/*
 					FOR THE MARKDOWN EDITOR
 				*/
 
-			/* Remove the indentation from the checkboxes at the root of the document
+				/* Remove the indentation from the checkboxes at the root of the document
 				   (otherwise they are too far right), but keep it for their children to allow
 				   nested lists. Make sure this value matches the UL margin. */
 
-			li.md-checkbox {
-				list-style-type: none;
-			}
+				li.md-checkbox {
+					list-style-type: none;
+				}
 
-			li.md-checkbox input[type=checkbox] {
-				margin-left: -1.71em;
-				margin-right: 0.7em;
-			}
+				li.md-checkbox input[type=checkbox] {
+					margin-left: -1.71em;
+					margin-right: 0.7em;
+					position: relative;
+					top: 1px;
+				}
+				
+				ul.joplin-checklist {
+					list-style:none;
+				}
 
-			ul.joplin-checklist {
-				list-style: none;
-			}
-
-			/*
+				/*
 					FOR THE RICH TEXT EDITOR
 				*/
 
-			ul.joplin-checklist li::before {
-				content: "\f14a";
-				font-family: "Font Awesome 5 Free";
-				background-size: 16px 16px;
-				pointer-events: all;
-				cursor: pointer;
-				width: 1em;
-				height: 1em;
-				margin-left: -1.3em;
-				position: absolute;
-				color: #32373F;
-			}
+				ul.joplin-checklist li::before {
+					content:"\f14a";
+					font-family:"Font Awesome 5 Free";
+					background-size: 16px 16px;
+					pointer-events: all;
+					cursor: pointer;
+					width: 1em;
+					height: 1em;
+					margin-left: -1.3em;
+					position: absolute;
+					color: #32373F;
+				}
 
-			.joplin-checklist li:not(.checked)::before {
-				content: "\f0c8";
-			}
+				.joplin-checklist li:not(.checked)::before {
+					content:"\f0c8";
+				}
 
-			.mermaid {
-				width: 640px;
-			}
+				.fountain {
+					font-family: monospace;
+					line-height: 107%;
+					max-width: 1000px;
+					margin-left: auto;
+					margin-right: auto;
+				}
 
-			pre.mermaid>svg {
-				white-space: unset;
-			}
+				.fountain .title-page,
+				.fountain .page {
+					padding: 1em 2em;
+					margin-bottom: 2em;
+				}
 
-			.mermaid-export-graph {
-				opacity: 0;
-				height: 0;
-				z-index: 1;
-				position: relative;
-			}
+				.fountain .title-page {
+					border-bottom: 1px solid #dddddd;
+				}
 
-			.joplin-editable:hover .mermaid-export-graph,
-			.joplin-editable .mermaid-export-graph:has(:focus-visible) {
-				opacity: 1;
-			}
+				@media print {
+					.fountain .title-page,
+					.fountain .page {
+						page-break-after: always;
+					}
 
-			.mermaid-export-graph>button:hover {
-				background-color: #CBDAF1 !important;
-			}
-		</style>
-		<div id="rendered-md">
-			<h1 id="linux-kernel">Linux Kernel</h1>
-			<ul>
-				<li>Kernel is the code that manages the hardware</li>
-				<li>Abstracts the hardware layer from the applications
-					<ul>
-						<li>Provides an interface for applications to interact with hardware</li>
-						<li>Application does not have to be written for specific hardware</li>
-					</ul>
-				</li>
-				<li>Kernel manages time-sharing, multi-tasking, I/O, memory, power management and hardware devices<br>
-					<img src="./resources/a228e1357e85414c9f28296df00a5df0.png"
-						alt="20f1a2580635f9565ba63493247fa51b.png">
-				</li>
-			</ul>
-			<p>A Full operating system needs more than just the kernel in order to be useful. Usually, Linux Kernel is
-				combined with GNU Project utilities, tools, and libraries in order to create a fully functional OS. The
-				correct term for this is &quot;GNU/Linux&quot; indicating that the OS contains Linux Kernel and GNU
-				software.</p>
-			<h1 id="gnulinux-os-linux-distro">GNU/Linux OS (Linux Distro)</h1>
-			<p>A typical Operating System is made of many software components. A GNU/Linux distribution is typically a
-				collection of the following:</p>
-			<ul>
-				<li>Linux Kernel</li>
-				<li>GNU Tools and Libraries</li>
-				<li>Package management system</li>
-				<li>Windowing system, Desktop Environment of other GUI components</li>
-				<li>Documentation</li>
-				<li>Additional software</li>
-			</ul>
-			<p>The support for a Linux-based distribution can be either commercially-backed or community-backed.<br>
-				For more information, you can review: <a data-from-md
-					title='https://en.wikipedia.org/wiki/Linux_distribution#'
-					href='https://en.wikipedia.org/wiki/Linux_distribution#'>https://en.wikipedia.org/wiki/Linux_distribution#</a><br>
-				To find out the heritage of a specific distro, you may find it in this svg graphics: <a data-from-md
-					title='https://en.wikipedia.org/wiki/Linux_distribution#/media/File:2023_Linux_Distributions_Timeline.svg'
-					href='https://en.wikipedia.org/wiki/Linux_distribution#/media/File:2023_Linux_Distributions_Timeline.svg'>https://en.wikipedia.org/wiki/Linux_distribution#/media/File:2023_Linux_Distributions_Timeline.svg</a>
-			</p>
-			<h1 id="some-examples-of-commercially-backed-linux-distros">Some examples of commercially backed Linux
-				Distros:</h1>
-			<ul>
-				<li>RedHat Enterprise Linux (IBM) (commercial license)<br>
-					- Fedora and Fedora Workstation variants are based on RedHat<br>
-					- Has strict rules regarding source-code access and distribution since purchased by IBM<br>
-					- Package Manager: YUM (Yellow Dog Updater, Modified), RPM (RedHat Package Manager) do not support
-					dependency resolution</li>
-				<li>SUSE Enterprise Linux (commercial license)<br>
-					- Community and open version: OpenSuse variants<br>
-					- Package Manager: Zypper<br>
-					- Suse has a GUI and TUI &quot;Control panel&quot; called YaST which can be used to configure many
-					aspects of the OS, including managing repositories and software</li>
-				<li>Ubuntu (Canonical Ltd.)<br>
-					- Based on Debian<br>
-					- contains free software and proprietary device drivers<br>
-					- Free-to-use, paid enterprise support is available from Canonical Ltd.<br>
-					- Package Managers: dpkg (apt and apt-get as front), snap, flatpak (optional)</li>
-			</ul>
-			<h1 id="some-examples-of-community-backed-linux-distros">Some examples of Community-backed Linux Distros:
-			</h1>
-			<ul>
-				<li>Debian (the Debian Project)<br>
-					- Entirely free and open-source<br>
-					- Most popular, and many other distros (such as Ubuntu) are based on Debian<br>
-					- Package Managers: Debian Package Manager - dpkg (apt and apt-get as front), others (optional)</li>
-				<li>Arch Linux<br>
-					- Free, but NOT endorsed by GNU (kernel contains non-free and proprietary components)<br>
-					- Not suitable for business or enterprise use<br>
-					- Package Manager: pacman package manager</li>
-				<li>Gentoo Linux<br>
-					- Free software<br>
-					- Compiled entirely from source code, can be configured to be specifically compiled for the hardware
-					to ensure maximum performance, but also more difficult to setup and configure<br>
-					- Package manager: Portage</li>
-			</ul>
-		</div>
-	</div>
-</body>
+					.fountain .title-page {
+						border-bottom: none;
+					}
+				}
 
-</html>
+				.fountain hr {
+					border: none;
+					border-top: 1px solid #dddddd;
+					margin: 2em 0;
+				}
+
+				.fountain h1,
+				.fountain h2,
+				.fountain h3,
+				.fountain h4,
+				.fountain p {
+					font-weight: normal;
+					line-height: 107%;
+					margin: 1em 0;
+					border: none;
+					font-size: 1em;
+				}
+
+				.fountain .bold {
+					font-weight: bold;
+				}
+
+				.fountain .italic {
+					font-style: italic;
+				}
+
+				.fountain .underline {
+					text-decoration: underline;
+				}
+
+				.fountain .centered {
+					text-align: center;
+				}
+
+				.fountain h2 {
+					text-align: right;
+				}
+
+				.fountain .dialogue p.parenthetical {
+					margin-left: 11%;
+				}
+
+				.fountain .title-page .credit,
+				.fountain .title-page .authors,
+				.fountain .title-page .source {
+					text-align: center;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .title-page .source {
+					margin-top: 1.5em;
+				}
+
+				.fountain .title-page .notes {
+					text-align: right;
+					margin: 3em 0;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .dialogue {
+					margin-left: 3em;
+					margin-right: 3em;
+					margin-bottom: 1em;
+				}
+
+				.fountain .dialogue p,
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					margin: 0;
+				}
+
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					text-align: center;
+				}
+
+				.abc-notation-block svg {
+					background-color: white;
+				}
+				.joplin-abc-notation-rendered {
+					overflow-x: auto !important;
+					overflow-y: hidden;
+				}
+				@media print {
+					.joplin-abc-notation-rendered {
+						overflow: visible !important;
+					}
+
+					.joplin-abc-notation-rendered svg {
+						max-width: 100% !important;
+						height: auto !important;
+					}
+				}
+			
+.mermaid { width: 640px; }
+pre.mermaid[data-processed=true] { white-space: unset; }
+.mermaid-export-graph {
+					opacity: 0;
+					height: 0;
+					z-index: 1;
+					position: relative;
+				} 
+				.joplin-editable:hover .mermaid-export-graph,
+				.joplin-editable .mermaid-export-graph:has(:focus-visible) {
+					opacity: 1;
+				}
+				.mermaid-export-graph > button:hover {
+					background-color: #CBDAF1 !important;
+				}
+
+				.joplin-youtube-player-rendered {
+					width: 100%;
+					max-width: 100%;
+				}
+				.joplin-youtube-player-rendered iframe {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			</style><div id="rendered-md"><h1 id="linux-kernel">Linux Kernel</h1>
+<ul>
+<li>Kernel is the code that manages the hardware</li>
+<li>Abstracts the hardware layer from the applications
+<ul>
+<li>Provides an interface for applications to interact with hardware</li>
+<li>Application does not have to be written for specific hardware</li>
+</ul>
+</li>
+<li>Kernel manages time-sharing, multi-tasking, I/O, memory, power management and hardware devices<br/>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXwAAAEsCAYAAADAaQg9AAAgAElEQVR4nO3dd3hUZfr/8fekJySU0EVCD4ZeQ5EAoawoSFFgXbEsIghi17X9vq6y6+ri6u5aEKQIFlYFUbqIFOkQWiCQRqihQ0IL6cn5/ZFMIGQCITPJJDmf13Xlyswpz7kzd3LPM895zgmIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiJQVFkc2ZkB/YCQQAtwJVHJk+yIiFdhVIB7YAMyzwCpHH8AhBd+AQGBmbqEXERH7rQPGWuCAoxq0u+Ab0Av4GahGJV/ocjc0DwL/GuDh4ZgoRUQquvR0SDgHsdGwdSMkXwW4AAyx5PT67WZXwTegObAVqErLNjBkBHh6OiIuERHzSkuFhfMhMgIgEejqiJ6+vQV/PRBCyzYwYhRYHHpKQETEvAwDfvgGovYB/G6BUHubdCl2LDknaEOo5JvTs1exFxFxHIsFho4En0oAvQ3oa2+TxS74ubNxcsbsNYwjIuJ4Xl45NTbHSHubs6fg58zIad7C3hhERKQwzYOsj3ra25Q9Bb8eAP7V7Y1BREQK41/D+uhOe5uyp+D7App6KSJSkq4Nmfva25Q9BV9ERMoRFXwREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8KfMsb7+K5e1Xi7y8rCjr8Yn5uDk7AHG+9Kws6n34LueTr+Lv7cPJV/4PTzf9aohUNOrhCz9H7eN88lUAElOS+Slqn7NDKvPUe5fySN04YebOMAA616vP9hPxzNwZxp9at3N2WLdkTPrA2SHcVFmPT8xHPXyTO3LxAqsPx+Hj7s6Pf3wUH3d31h45yKELic4OTUQcTD18k5u1KwzDMBjRsg0BVaoyvGUbvg7fyZe7tvNu33ts7mMdysh+ZzIzd4XxxY5tRJ8/i6vFhc717uT1kFD6NW7msP0KY23PVk86ITmZz7dvZmlMFLEJ50lKT6OOrx8hDRrxVKeu9GrYOG/bsBPxfBW+g7WHc97oXCwWGlSpxv3Ng3g9JBR/bx+bx73x8Y2x3Cy+zfFH+WjTOjbFHyExJQV/b296BDTilbt70fXOgJv+rF+H7+TTbZuIPHcGNxdX7g5oyHv9BtCuzh0F9vs1LpZ/b17P/nNnOHs1iRo+lehevwHjO3e9rddaKgYVfBPLNgzm7N4BwJgOwbnfO/N1+E7mhO9gUmh/XF0K/xA4cdlCpm7fkm/Z6kNxrDl8kCkDhzKhczeH7ldUW+KPMuz7rziTlJRv+fHLl/guIpzvIsLzFeEu0z8t0Eb0+bNEnz/LgsgIto17lho+leyK6XpTt2/hmWULyTaMvGVnkpJYEBnBz1H7mHb/A4zt2MXmvi+tWMJ/tmy4bkkGvxyIZsPRQ+wc/zyB1WvmrZm2fSsTlv6Ub/9TVy6zIDKCBZERGnIyIRV8E/vlQDTHL1+ieY2ahDRoBEDPBo1pXqMmMefP8UtcDIMCgwrdf+r2LYzt2IVXe/QmoEpVjl26yOSNa5m5M4znf1lMr4aNaVGztsP2K4rTSVe4/3+zSUhOJrhefd7q3Y/u9Rvg5+HJ6aQrrDtyiOk7t+Xbp1fDxozr2IWQBo2o4+vHlfQ0dp48wf9bvYLtJ+J5b/0a/j3g/rztjUkf3LT3fjN7Tp/iueWLyDYMRrfvxBshfWhQtRpHL17gH+tX81X4TiYuW0i3+g1oVatOgf0/3baJN3v2YXT7ztT19WP36ZOMWTif2IRzvL9hLbOHjszb9p8b1wLwRIfOvBnSh/pVqpKUnsbm+KN8unXTbb+2Uv5pDN/ErCdrrb17qyfadwZgVu76wgxu3oLpgx+kqX91PFxdaepfnRmDh3N/8xZkZGXxSSFFpbj7FcWHm9aRkJxMj4CGbBzzNIMCg/D39sHd1ZX6VarySNsOrH9iQr59fh89nofbtKd+laq4u7ri7+1D/ybNWPDHRwFYGhtV7Hhu9Mm2jWRmZzMoMIgvh46kWfUaeLi60qx6DeYM+yMDmjYnIyuLj7dutLn/GyF9+EffATT1r04lDw96BDRkyqChAKw9fDDftmev5nzCmdz/Pprkvtb+3j4MCgzi18eedNjPJOWHevgmdSYpiaWxUbi7uvJ4u4751j3erhP/t+ZXlsZGcTrpCnV8/Wy28WqP3jaXv9ajN0tiIllzOM6h+xXF8gPRALzbdwDurq5F2ufE5Ut8tHk9Kw/GcuTiBa6mp+dbH3/pYrHjudG6I4cAeC0k1Ob6N3qGsiIuht9vKN5Wf27fqcCy4Hr1IXe45nod69Zj47EjhM7+gkfbdqBnw8a0r3OHrrEwMWXepOaE7yAzO5sHglpRq5JvvnW1fX0ZFBjEz1H7+Cp8J68VUqALG3YJqlkLcsfMHblfURy5eAFyp5gWReS5M4TMmkpiSnKh26RmZhY7nhudyP3ZWuT+rDeyDuOcuKF4WzWsWq3AssqeXpB7Ad31pgwaxr3fzGLf2dO89ttyALzc3OjbuBkvd+9JaKMmdv40Ut6o4JvUl7u2A/BT1L6bXkA0a1dYoQW/MBYsxYqpuPvZ4/XffiExJZnO9erzXr8BtK19B9W8vXFzcSEtMxOvv79Z6jHdjIul6K9Rm9p1iXv+NRZF72f14TjCjsez7+xplsVGsfxANN8Pf5iRrdqWaLxStmgM34TWHTlEbMK5Im17IOE8648esrku8tyZmy6/s3IVh+5XFNYe8PYT8UXa3jrE8v2IUfRr3IyalSrhljszKaaIr9HtqJf7s0WdO2tz/f6zOa9BPb/KDjmet7s7D7Vux4zBw9nz9Iucf+0d/nJ3LwzDYNLvqxxyDCk/VPBNaOaunJOxf+3dD2PSB4V+vZE7zjyzkJO3H2z83ebyybnLCxsyKO5+RWGdVfTXNSvJzM6+5fZpWTnDNd42xrU/3LSu0P2s4+BX0tJuKz7r/P/JhbwG/9yQM7OmdwkNt1Tz9ubNnn0AOHxRF9eZjQq+yVxKTWVBZAQuFkvebJzCPNmxCxaLhR8jI7iUmlpg/eKYSMYtXkBcYgIZWVnEJSYwbvEClsRE4u7qynNdethst7j7FcVL3XtS3ceH9UcP0fPLqSw/EM3F1BQys7OJv3SRuXt30+vLaXnbt61dF4AnFs4n6txZUjIy2Hf2NE8snMc3e3YVepyAKlUhd8jrxpO8N/Nclx64ubiwxMZrMGbRfJYfiLb7NbDq/MUnfLJ1IxFnTpOckUFaZiYx58/x4ool4MBPEVJ+aAzfZL7du4uUjAz+0CSQBjZOAF6vcTV/+jRqwupDcczdu5ung/NfEDWhczembt/CjBvmtVssFj6+dzAta9k+OVvc/Yqijq8fSx4ezdDvvmJL/FEGfvvlTbd/O7Q/g+bOZkVcDCs+i8m3bmJwd6aEbba53/AWrXl/w1peXLEkr4BShHn5bevU5eN7h/DM8oXM2LmtwGvgYrHw2X1DaV274Bz827Xj5HF2nDxuc52riwvv9bvX7mNI+aKCbzKzck/WPtkx+JbbAozt2IXVh+KYuSusQMGfMjCnMM3YGUbM+bO4WCwE1wvg9ZBQ+jcp/LL94u5XVN3qN2D/My/zydZNLI2NIi7xPKmZmdTNvbXCuE7XrmK9r9ldLBs1mr+vW83uUydwc3EhqGZtnurUhTEdggst+G/37o8B/Lh/L8cuXSwwQ+Zmng7uRts6dflo83o2HTtCYkoy/t4+9AhoyCt396Jb/QZ2vwYAO8c/z7d7drHmcBwHEs5D7jmE7vUb8EK3EJu3YpCKrdjTIgzIuS5cl2ebTnGvMi3ufiKml/u3Y7GjZqMxfBER81DBFxExCRV8ERGTUMEXETEJzdKR21bck646WSviXOrhi4iYhAq+iIhJqOCLiJiECr6IiEmo4IuImIQKvoiISajgi4iYhAq+iIhJqOCL6YSfPkn46ZPODkOk1OlKWzGdr8J3AtBugO4HL+aiHr6YSkZWFnP37mLu3l1k3MY/LRGpCFTwxVSWHYjm3NWrnLt6lWUHop0djkipUsEXU/lq9w6bj0XMQAVfTOPGXr21ty9iFir4Yho3jttbx/NFzEIFX0zDOjvnVstEKioVfDGFwubea06+mIk9BT8JgLQ0hwUjUlKsPXkfd4+8Zb4envnWiZRJaanWR5ftbcqegn8CgAsJ9sYgUqKsY/UjWrZhYnC3vOUTg7sxrlMXzcmXsi0xr8aesLcpewr+egBiIu2NQaREbT95nCkDhzFv5CP5evhebu58cf+DTBk4jO0njzs1RpFCXaux6+1typ5bK8wDxrJ1E3TtAZ5e9sYiUiK6129w0/UjWrYptVhEbktqCmzbbH02z97mit3Dt8AqYB3JV2HhfDAMe2MRERErw8iprclXAdZYYI29Tdo7S2cskEhkBMz7FlJTi7CLiIjcVGoKfP81RO0DSADGOaJZu+6WaYEDBgwDfiYywp8jh6Dr3RAYBNVrgodHEVoRERHS0iDhHMRGw7ZN1p59IjDUAgcdcQiLIxoxoCkwA+jtiPZESso7wKTcx2/nPhcpo9YA4xxV7HHU/fAtEAeEGtAXGAmEAPUBX0e0LyJiAklAPLAB+MERY/YiZvdOzodSDNTBF5PRrRVERExCBV9ExCRU8EVETEIFX0TEJFTwRURMQgVfRMQkVPBFRExCBV9ExCRU8EVETEIFX0TEJFTwRURMwiF3y7xmUn8wRoIlBLLvBEslx7YvYq/fc7/IvbmrbvAqZYVxFSzxYNkALvPgrVWOPoKDCv57gZAxE4wQx7QnUlJU8KW8sKwD77Hw6gFHteiA2yO/1wsyfgajmp9fJUL7BdO6TSC1alfH09PdETGKOMzSRQZLF+cU/EGDezFoyNvODkkEgLS0DM6eSSBibyxrVm0j6UpyL0jZBu8NgTc3OOIYdhb8yc0hZSFQtWOnFjw6egheXvovVyIit8vT0536AXWoH1CHPn278NXsRezeGVUN0hfCB10d0dO386Rt6gxrsX9y/HAVexERB/Dy9mTchBG07xAE4A/J0x3Rrh0Ff1J/MEL8/Crx6OghWCwOPv8rImJiFouFx54Ygq+fDzknmyb1tbdNOwq+MRIgtF+wevYiIiXA29uT0D7Buc9yaq497Cj4lhCANm2b2xuDiIgUok27vBrb09627Onh1wOoWauavTGIlKjYmHVsWFf4EOjOHfM5GLepVGMSKaqatfytD++0ty17Zun4Anh6ajhHyrYmTbszY+oI9u5ZQu3agXnL09OTmTF1JLExv/PPj044NUaRwlw3ZO5rb1sOmIcvUra5uroT3HUUq3/7LzEePnnLf18zhfT0ZPr2fwFXV10zIhWf7qUjptC1++OQ26u3sj62rhOp6FTwxRTqB7SjfkC7Ii8XqYhU8MU0bPXk1bsXM1HBF9MI7joq31i9dWxfxCxU8MU0/Pxq0rrNwLznrdsMxM+vplNjEilNKvhiKl3vftzmYxEz0LRMMZXre/XX9/ZFzEAFX0zl+nF7zb0Xs1HBF9PRzBwxKxV8MR3Nuxez0klbERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8kVI0foyF8WMszg5DTEoFX5ziZoXPMAy++3Zi3ja//jK51OMTqYh0e2QpU7Kzs/hmzpNs2TQHi8WFhx/9nJBeTzk7LJEKQQVfyoysrAy+nD6KnTvm4+rqzugnv6ZT8EPODkukwlDBlzIhIyOV6Z8PJ2LvMtw9vHlqwo+0anOfs8MSqVBU8MXp0tKu8vmng4mJWoOXd2UmPreEZoE9bW57/vxhflvxLyL3r+RC4nHc3b0IaNCB0H7P0a790ALbW88TTJ2Zzcb109m4fianT0WTkZHC5zMy820zbZbB1s1fs3b1p5w6GYmLqxtNm97NkAfeK/S/ZN1uPCLOpIIvTpWSconP/nsfB+M24+tbg+deWkFAg442t43cv5IvpjxIWlpS3rLMzDRiotcSE72W+wb9H4OH/d3mvv/7ZgIb1n2R99xiKXjCeP4PL7F65X/yLdsX8QsHYjfw5ts7qV070GHxiDiDCr441b8/CCX+2G6qVqvHCy//Rp26QTa3u3DhONOnjiAtLYngLg/T756XqV0nkOSrF9ixfR6LF77F8qXvEtSyv81PBxvXz6D/PS/To+dYatZqiouLa4Ft1q76lHsHvkn3HqOpXKUu8cd2883sMZw5E8uKZe/z+BOzHRaPiDNoWqY4Vfyx3QCMenRaocUeYM1v/yU15TJduz/GE+PmEtCgA56evlTzr0//e17mgeE5Uzd/X/2Zzf17hU7gwZEfUrtOc5vFHuDegW8w5IF/ULNWUzw9K9G0WQ8eemQKADHRax0aj4gzqOCLU90V1BeAOV/+mWNHdxa63f6IFQCE9n3W5vqOnUYAcPDgZpvre/Yef8tYut395wLLGjUKBuDypVMOjUfEGTSkI0418bklTP1sKJH7V/Lvf/XhmeeX0bRZjwLbnT9/GIDJ/+gKuRdn5TDyPb9y+azN49Ss2eSWsVSv0bDAMi/vygBkZqY7NB4RZ1APX5zK3cObp59bTKvW95KacplP/n0PUZGrCmxnGNmQe2FWdnYWhpGd+2VcV2xz5vIXdpxbsViK/udgbzwizqAevjidm5sn459ZyPTPh7N3zxKmfDyIcRPm0abd4Lxt/P0DOHMmlknvxRSYLeMMZS0ekaJQD1/KBDc3D56auIB2HYaRmZnGtCkPsiPs+7z1rdsOAmDlLx84Mcprylo8IkWhgi9lhqurO+MmzKNDp+FkZ2cya/ooNm/8EoD+A16hkm91Nm2YxeefDCZy/0ouXTxJdnYmKSmXOHpkB7/9+hHv/a1TqcRa1uIRKQoN6UiZ4uLixpNPfceXLm7sCPueb+Y8SVraVUL7Psszzy9j2mfD2LtnCXv3LHFqnFWq1C1T8YgUhQq+lDkuLm48MfZbXF3d2LblW37433OkpSUx4L43ePvd/axbO5W94Ys5czqG1NQreHn5Uat2IK1a30vHziNLLc5GjbuUqXhEbsWO/8TwjgEwbdbbjotGREQKGD9mUu6jd+z67zkawxcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfCD+WDjxx8KdHYaUEuXbXJTva3Q/fGDr5q8AqB/QztmhSClQvs1F+b7G9D38rKwMwrbOJWzrXLKyMpwdjpQw5dtclO/8TF/wI/Yu48qVc1y5co6IvcucHY6UMOXbXJTv/Exf8Ldu+srmY6mYlG9zUb7zM3XBv/Fd39obkIpJ+TYX5bsgUxf8G8f1rON9UjEp3+aifBdk6oJvPXt/q2VSMSjf5qJ8F2Tagl/Y3FzN2a2YlG9zUb5ts6fgJwGkpqY7LppSZH2n9/DwyVvm6eWbb51UHMq3uVSkfKempFkfXra3LTsKvuUEwLmzifbGUOqsY3kdO42gd5+Ject7h04kpNc4zdmtYJRvc6lo+T6bV2ONE/a2ZU8Pfz3A3j2x9sZQ6o4c3s5Dj0xh7IR5+XoA7u5ejHrsCx56ZApHDm93aoziOMq3uVS0fF+rsS7r7W3LjlsruMyDrLFrV2+jb78ueHl72htLqWnStPtN13fsNKLUYpGSp3ybS0XKd3JyKr+vDst95jLP3vbs6OG/tQos65KuJPPV7EUYhmFvLCIiksswDL6evYikpGSANfDWGnvbtHOWjvdYIHH3ziimT51PyrWTCyIiUkzJyal8MWUe4buiASMBXMc5ol0775b56gF4dxhk/rx7Z5T/gZijhPbrQus2zahdpzqenh6OiFFEpMJLTU3n7JkEIvbEsnZ1mLVnnwgMhbcOOuIYFkc0Au83hbQZQG/HtFeafs/9Ijf8cvgjyG1Qvs2lXOd7TU7P3jHFHsfdD/+NOCAUJvUFYyQYIWCpD/g6pn0RkQovCYx4sGwA1x8cMWYvBb0DGLlf7zg7GClxyre5KN/XMe2tFUREzEYFX0TEJFTwRURMQgVfRMQkVPBFRExCBV9ExCRU8EVETEIFX0TEJFTwRURMQgVfRMQkVPBFREzCQXfLzDXpqf4YxkgslhCyjTuxUMmh7ZeE33fmfAH07pjzVVYZXMVCPBaXDbhkzeOtGaucGo/yXbKUb/sp3/k45m6Z700MJCNrJkZ2CACG4ei3EgFy/8Duwsi+iyzLWCaNW4e3ZSyvfnGgVONQvkuH8m0upZBv+wv+e2N7kZH5M4ZRzaeSJx2CG9M4sDbVqlfC3d1Bd18uQZuNJDbn9gC692pO97eHODukQmVkZHIh4SqHYs+wc9shUpLTepHCNt57cghvztxQKkEo36VG+baf8p2ffRmb/HxzUlIWglG1eYs7uGdIezw8yv4vQXnl7u5GrTpVqFWnCh26NGbFot3ERp2sRrrLQj54qmuJ9/yU71KlfJtLaeTbvpO2qWkzgKrNW9zB/cM76ZehFHl4ujF4RCeaBdUF8Cc5e3qJH1T5dhrl21xKKt/FL/iTnuqPkR3iU8mTe4a0B4sG9UqdxcKAIe3x9vEELL2ZNLFviR1L+XY+5dtcSiDfxS/4hjESoENwY73zO5GnpzsdghvlPDEyR5bYgZTvMkH5NhdH57v4Bd9iCQFo0ryOvTGIna7lwOhZYgdRvssM5dtcHJlvO3r41AOoWs3H3hhKXfy6CPZOX1Ho+pj5GzmxKbJUY7JHVX/rdGjLnSV2EOW7zFC+b075Lpwdn9UMXwD3cvhxr173IJaMeJ+DS7ZRLbBe3vKM5DSWjHyf+N8jGH/ia6fGeDuufeTOyUnJUL7LCuX75pTvwpW/bDqAi7sbQaN6s/O/i3D38cxbHj5lKRnJaXR8YQgu5WCOsRSN8m0uynfhTHsvnZaP94Pcd30r62PrOqk4lG9zUb5tM23Br9WuMbXaNS7ycinflG9zUb5tM23BB2j5eMFprbaWScWgfJuL8l2QqQt+0KjQfGN5OWN/oU6NSUqO8m0uyndBpi74PjWr0Hhg57znjQd2xqdmFafGJCVH+TYX5bsgUxd8gFbXfcRrZfKPe2agfJuL8p2fOecmXef6d/3rewNSMSnf5qJ852f6gm+ds2t9LBWb8m0uynd+egVMPi/XjJRvc1G+r1HBz52bK+ahfJuL8n2N6U/aioiYhQq+iIhJqOCLiJiECr6IiEmo4IuImIQKvoiISajgi4iYhAq+iIhJqOCLiJiECr6IiEmo4IuImIQKvoiISajgi4ipfGgZyIeWgc4OwynK/d0ys9Iy2P/1ag4uCePs7oOknL+Mi4cb1ZrWpfHAYNo/e3+Bf2tmK9nuvt74B95B4IgQOr4wBDcvD5v7vGIsu2k8Rd2uIrr+de3w7P30+WR8oduufnYauz9bkvfcjK9XRXHj35PF1QXPKpXwqVWFWu2b0KBfO+56qBfuPp5Oi1FylOse/qltMcwKHMvKcZ9ycMk2rhw/T2ZqOumXkzmz6yBb/v4dMxo9wb45q27ZVkZSCmd2HWTDG3P4oddrZCSnlcrPUFFFfruWzNR0m+syU9OJ/HZNqcckpcPIyiY18QqJ0ceJ/m4dv475mC/qP07M/I3ODs30ym0P/9S2GL7v9RpZaRnU7tiUjs8P4c6erahUpxqZqelcjDvFwaVhhE9ZyorR/6HVnwv+E4S8XqVhkHQykYNLtrHutdmcCotlx4c/0e2vfyr9H6wCqNM5kNPbY4n9cRMtHgktsD52/kbSLl6lbnAgp8JinRKjON71f0/pV1K4cvw8JzZFEj51OWd3H2TJyPfJ+uYVm78TTonThMplDz8rPZOlD00mKy2Dtk/dyyPb/kOLR/tQuUEtXD3d8axSidodm9L97YcZe2gWLW/1z4stFnzrVaft+Pvo899xAMTM31A6P0wF1GbsPQDsnbHC5nrr8jZjB5RqXFJKLBY8KvtQvUUAbcYO4NEdH9PxxaEA/Db+M1ISrjg7QtMqlz38qLlruXTkDLXaNabflKexuBb+vuXu6829c14qctuNBwUDcPHgKYfEakZBf+rF2pdmcnz9PhJjjuPf/M68dYkxxzm+YT/uvt7c9VBPfh37SaHtXDp8hu3/WsCRlbu4cvw8bl4e1O7QhA7PDabp0G4Ftr/+/Mm+OavYM3UZ5yPjcXFzoV73FvT4x2N5//0o8ps17P58GQn7j2IYUK97ED0njy70vyOd3BzF9o9+4sSmSFITk/Dy9+XOHi3p/MoD1O16V+GxZC9lz/QVRMz8lYTo42SmpPFy5hK+7fwCp3ccYMDsF21++gSI+HIlv475mDqdA3kk7D+3fN3LKouLhdCPnuTU1mhObolm74wVdHl9RIHtbiffX7d/lrPhhxg8/w0Ch/ewedyYeRtY8sd/Uqt9Ex7bde337Gbn2VISrhD++VIOLQ0jMfYEGUmpVKpTjXohLWn71L3U79W62DEDHPl1Fzv+/TPn9x8l+ewlvGtUpl73INqOv48G/drdxqtaPOWyhx+3eBsAHZ4fctNiL85hLeYAETN/zbdu74yc50F/6oW7r3ehbRxZuYs5bSYSPnUZFw+eIistg7RLVzm2di8Lh73Lxre+KXTfNc9/wYrR/+FUWCwZSSmkXbzKoeXb+S7kVRKi4ln97DSWP/YRp7ZGk34lhYykFI6s3MX3PV/lYtzJAu2FT13GdyF/4cBPm0k+c5HsjEySz1wkdsEm/nf3K4V+kgH4bcIUfhv/Gad3HCAjKQUj2wCg3cRBOW1PWVrovnumLs/Z9ukKMKPEYqH9M/cDcGzNngKrbzffrcf8AYCIWSsLPWTElyvzbVhrAr4AAA0jSURBVHsrJ7dEM7vleDb99VtOhcWSdvEq2ZlZXDl+nujv1vFD79ftinnPtOX8OOAtjqzcRdKJBLIzMrl6KpHYBZuY3///FSlGe5XLanlmZxwA9Xu2cnjbh5aGAVC1SV2Ht20m1uGa/V+tJis9E3KH4iK/Xp27/p5C971y/DyLR7xPRlIKQQ/35tGdn/D8lR956tgcen84BjdvD7a++z3H1++zuf/uKUsJfnU4Y2Jn8PzVnxi15SOqtwggIymFn+57m/Cpy/Kv3/pvqrcIIP1KCtven5+vrXN7DrPmuS8wsg1aje7PmNgZvJi2iDGxM2j5eF+MbINVE6dyft9Rm7HsnbGCTi8/wBPRX/By5hJeyc4p8Hc91BMvfz9O7zjA6e0Fz2OcCovl9I4DePn75b15lnd3dA8CIGF//teqOPkOGhWKq6d7Ts86/lyBY12JP8fR33bj5uVB0MO9bxnb1dMX+Pn+d0g+c5G6wYEMW/I2zyR8z0vpi3jq2Bzu++YV7gxpaVfM2/6Z87vV+ok/8GTcTF5MW8QzCd8zbMnbNPxDh2K+qrenXBb8lHOXAKh0h7/D2kw6mcieL35hzQvTAQh88G6HtW1GdYMDqdm2EcnnLhG3aCsAcQu3kHzuEjXbNqJO58BC993530WkX06m5WN9GTj3L9Tu0AR3X2/86tek08sP0HPyEwD5pnVeL/i1EfScPJpqze7A3ceTul3vou9nEwC4dORMwfVdmuetP7o6PF9buz5ZTHZmFk0GBTPgyxeo1uwOXD3cqNbsDu6d8xKNBnQkOyOTnR8vshlLuwkD6f3hGPyb35nv06iblwetn+gPQPjnBYcWwj/PeWNoNbp/gSnC5VWlOtUASE1Myre8OPn2quZLs2HdMLINm7Pw9s1ehZFt0HRYN7yq+d4ytu0f/kRKwhXq9WjJnzb+iyaDgvHy98PF3Q2/+jVp8UgoD63/wK6Yk89eBKDn5NFUbVIXVw83vPz9aDIomOG//r0Yr+jtK5cF31GsF2B8aBnItHqP8tv4z0i/nEztjk3p/JcHnR1euWft5VuHPKzf246796b7HVmxE4D2z95vc33zETljtic2R9k+ro2P8HU6NSvS+qunEvMtj18XAUDwa8NtHqvLGyNztvs9wub6tuPvs7mc3DcDLBaif1hPauK1E5mpiVeI+WEDWCy0m1D4/uWOkfvdkn9xcfPdekzOp8R9X/4GhnFthWGwb/ZvUEiubTm8fDsAPd59FBf3W5/aLE7MtTvm/I79EPo6YR/8yKmt0WSlZRQpPkcplydtvWtW4Ur8Oa6eTKRK4zoOadO9khfVmt1B8xE96PjiMNy8b+hVWSxgGBjZBhYXi802jKzsa9sKLUaFsu4vszi6Kpxjq8M5unoPbt4eBI26+UfsS4dPAzC3a+7J9tw/5ry/6dwHyWcv2dy/csPaBZZ5+HkXab11+Mkq6UQCANVbBNg8Vo1WDXK3O29z/c2GBqs0rkOjAR05/MsO9s3+jU4vPwBAxJe/kZmaTsN7OlSoocWrZy5Abu/8esXNd4O+bancoBaXjpzh2Jo9BPTNOel5dPUeLh05Q5WGtQno07ZIsV06cgZypxQXaftixNxvygQW3PtXzu87yvrXZkPuJ72Avm3p9PIDBIS2KdKx7VEue/i1OzYFIL6QMdyiesVYlvf1fNICHtv9KV3e/GPBYg94+HoBkHYxyUZLOVIv5KzzrOxjV1wVhWfVSjQfEQKGwZKHJoNh0HxkCJ5VKt10P+uJTSMrO+crO+eNFsPI15PLzsi0uX9hb8hFXe9Itn6Xrmc9IRs+7Ze8n2/PtJyTte1zT+xWFCdze7s1WjXMt7zY+bZYaDU6Z1hs73UnbyNm5UwMaDW6f4l1vooTc802jXgybhaDvnuN1k/eQ802jchKz+DQsu3M6/smMfNKfip4uezhNx3chbiFW9j18SJaPtqnVGbqVGlch3N7DnM2/FChvYaz4Ydytm1UsAdpVm3G3sP+r1eTcv5y7vNbz733C6jJhdgTjImZTrXAeqUQZeF861Xn4sFTJETFU+/uFgXWn99/LHe7GsVqv/F9nanSqDYX405yZOVuDMPg4sFTVG5Qi8YDg+2Ov8wwDHbnzkgK6Jv/78eefLca3Z8tf/sfB37anNPhMgwO/LwFi4uFloVMd7WlSsPaJETFc3p7bIGpl7YUN2Y3bw/ueqhn3on41AtJbHt/Htv/tYDNk/5H85EhRW6rOMplDz9oVCiVG9TibPghVj0z9dpQig0ZSSmsGG3/HGZrkd99k2l01hM0Rf0YaQb1erSkelB9AKoH1bdZNG/UJPdaiLAPfizx+G7F+scfNtl2LGG5My/q9751kbDF4mKh7VM54/S7pyzNm6bZ9ql7S/WTSEkysg3WvTabk5ujcPf1ps2T+Wdo2ZPvygE1Cejbjqy0DKLmriVy7u9kpWXQoH97KgfULHI71utvNv31W7Izs265vaN+R72q+dL1zT/CdcNEJalcFnxXDzfu/+F1XD3d2TNtOXO7vkTkt2u5fOwcWemZ1+6l87fvmNF4TJHupXMr7ScOws3bgwM/bWbZIx9ydvdBMlPTyUxN58yugyx9+APiFm3Fzdujwn0Ut9foyGm8YixjdOS0Im3f+ZUH8K7uR8Sslfw8+G8585ZPJpKdmUXapauc3nGAHR/9xDedni/x2Ds8NxgXN1cOLtnGynGfcjHuJNkZmVyMO8mvYz7m0PLtuLi70fG5wcU+Rusxf8DV051Dy8I4tHw7rh5uRZ47XlZlJKWQEBVPxMxfmdvlRbb/awEA90x/Fi9/v3zb2pvv6+fkW4dzWj9xe69fp5eG4V3dj+Pr9/F9z1c5tHz7tXn48eeImruW73u9ZlfM33Z+gV2fLOZ8xBEyktPISssgMeY4a1/MmRlY3E+Jt6NcDukA1O3SnId+/yeLR/6T0zsOsPzRD21ud7tX2hamapO6DPjyRX55/COi5q4lau7aAtu4ergxYPaLDjuRbFaV6vrzwLJJLBz2LgeXbOPgkm1Oi6Vm20b0+fgpVj0zlb0zVhS4yMriYqHfZxOo0bphoW3cineNyjQfGULkNzk3lAsc3gOfWlXtjr203eyWw97V/ej/xbM2pzvbm+9mQ7vh5e+XN6TqXd2PpkO63lYblepUY9iSd1g49O+c3BLNTwPfufn2xYj59I4DnN5xwOY6i6sLIe89flsxF0e5LfgAdbvexZMHZrD/q9XELd7K2fBDpJy/nDdPuvGgYNo/U/D2yMV110M9qdmmITv+s5Bja/Zw9WTOFD7fetWpH9qGTi8OLXQ2h9yeul2aM3r/VPZMXUbc4m0kxhwn/UoKHn7e+AfWo9G9nUp8vNOq3dMDqdm2ETs++okTm6JITbyCl78f9Xq0oPMrD3JHt4K3VrjtY4y/L6/gl/cray2uLnhW9sGnVlVqtW9Mwz90oPkfe9709sj25NvV050Wj4Sy65PFcN1FWbfrjm53MXr/VHZ9spiDS8O4GHeSzNQMfOtWo15IK9qOy3/+6XZjfnTnJ0R+u4Zja/Zw8UDOFd2+9apzR/cgOr4wtNDbejhS8QcJ3xlnALzy9hAHhiPF9eGk3At/3pleMgO/yneJiv5uHUsf/oCabRvxePhnt9xe+TYXR+W7XI7hi1Q01inG7W5yoZaIvcr1kI5IeZeVlsGZXQeJnb8Bz6qVCBrl3HvFS8Wmgi/iJDee5Oz94Zh8VwSLOJoKvogTWVwsVA6oRdvx99HppWHODkcqOBV8EScx87/aE+fQSVsREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTUMEXETEJFXwREZNQwRcRMQkVfBERk1DBFxExCRV8ERGTsKPgW5IA0tMzHRiOFEd6mjUHlssldxTlu6xQvs3FkfkufsG3cALgYuJVe2MQO12w5sAwTpTYQZTvMkP5NhdH5tueHv56gIOxp+2NQeyUlwMX1pfcUZTvskL5NhdH5rv4Bd8lax7Arm2Hr/vIIaUtLTWD3WGHcp64ZM8rsQMp32WC8m0ujs538Qv+WzNWYWFdSnIaKxbtBsOwNxa5TYYBKxbtJiU5HXBZw1sz15TYwZRvp1O+zaUk8m3fLB1vy1ggMTbqJIvn7yAtLcPeeKSI0lIzWDQvjAPRp8CwJOCaPa7ED6p8O43ybS4llW+L3S28O7EnmRk/A/7ePh506NKYxs3q4F+9Eu4ebo6IUXKlp2dyISGJQ7Fn2BV2KPedn0QMhjBp+sZSCUL5LjXKt7mURr7tL/gA749pSprLDLD0dkh7UkQua3DNHsdb0w+W6mGVbydRvs3F8fl2TMG3mjSxL0bmSAwjBIulPhi+Dm3f9CxJGEY8FssGXLN+KNEx3KJQvkuY8m0uZSzfIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiJF9P8BabNzDMo1LYcAAAAASUVORK5CYII=" alt="20f1a2580635f9565ba63493247fa51b.png"/></li>
+</ul>
+<p>A Full operating system needs more than just the kernel in order to be useful. Usually, Linux Kernel is combined with GNU Project utilities, tools, and libraries in order to create a fully functional OS. The correct term for this is &quot;GNU/Linux&quot; indicating that the OS contains Linux Kernel and GNU software.</p>
+<h1 id="gnulinux-os-linux-distro">GNU/Linux OS (Linux Distro)</h1>
+<p>A typical Operating System is made of many software components. A GNU/Linux distribution is typically a collection of the following:</p>
+<ul>
+<li>Linux Kernel</li>
+<li>GNU Tools and Libraries</li>
+<li>Package management system</li>
+<li>Windowing system, Desktop Environment of other GUI components</li>
+<li>Documentation</li>
+<li>Additional software</li>
+</ul>
+<p>The support for a Linux-based distribution can be either commercially-backed or community-backed.<br/>
+For more information, you can review: <a data-from-md="" title="https://en.wikipedia.org/wiki/Linux_distribution#" href="https://en.wikipedia.org/wiki/Linux_distribution#">https://en.wikipedia.org/wiki/Linux_distribution#</a><br/>
+To find out the heritage of a specific distro, you may find it in this svg graphics: <a data-from-md="" title="https://en.wikipedia.org/wiki/Linux_distribution#/media/File:2023_Linux_Distributions_Timeline.svg" href="https://en.wikipedia.org/wiki/Linux_distribution#/media/File:2023_Linux_Distributions_Timeline.svg">https://en.wikipedia.org/wiki/Linux_distribution#/media/File:2023_Linux_Distributions_Timeline.svg</a></p>
+<h1 id="some-examples-of-commercially-backed-linux-distros">Some examples of commercially backed Linux Distros:</h1>
+<ul>
+<li>RedHat Enterprise Linux (IBM) (commercial license)<br/>
+-  Fedora and Fedora Workstation variants are based on RedHat<br/>
+-  Has strict rules regarding source-code access and distribution since purchased by IBM<br/>
+-  Package Manager: YUM (Yellow Dog Updater, Modified), RPM (RedHat Package Manager, does not support dependency resolution)</li>
+<li>SUSE Enterprise Linux (commercial license)<br/>
+- Community and open version: OpenSuse variants<br/>
+- Package Manager: Zypper<br/>
+- Suse has a GUI and TUI &quot;Control panel&quot; called YaST which can be used to configure many aspects of the OS, including managing repositories and software</li>
+<li>Ubuntu (Canonical Ltd.)<br/>
+-  Based on Debian<br/>
+-  contains free software and proprietary device drivers<br/>
+- Free-to-use, paid enterprise support is available from Canonical Ltd.<br/>
+-  Package Managers: dpkg (apt and apt-get as front), snap, flatpak (optional)</li>
+</ul>
+<h1 id="some-examples-of-community-backed-linux-distros">Some examples of Community-backed Linux Distros:</h1>
+<ul>
+<li>Debian (the Debian Project)<br/>
+-  Entirely free and open-source<br/>
+-  Most popular, and many other distros (such as Ubuntu) are based on Debian<br/>
+-  Package Managers: Debian Package Manager - dpkg (apt and apt-get as front), others (optional)</li>
+<li>Arch Linux<br/>
+- Free, but NOT endorsed by GNU (kernel contains non-free and proprietary components)<br/>
+- Not suitable for business or enterprise use<br/>
+- Package Manager: pacman package manager</li>
+<li>Gentoo Linux<br/>
+- Free software<br/>
+- Compiled entirely from source code, can be configured to be specifically compiled for the hardware to ensure maximum performance, but also more difficult to setup and configure<br/>
+- Package manager: Portage</li>
+</ul>
+</div></div>
+					</body>
+				</html>
+			

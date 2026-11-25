@@ -4,31 +4,7 @@
 					<head>
 						<meta charset="UTF-8"/>
 						<meta name="viewport" content="width=device-width, initial-scale=1"/>
-						<style>.jsdraw--editButton {
-  display: none;
-  width: min-content;
-  max-height: 50px;
-  z-index: 1;
-  opacity: 0.9;
-  align-self: flex-end;
-  justify-self: right;
-}
-
-.jsdraw--svgWrapper {
-  display: inline-grid;
-}
-
-.jsdraw--svgWrapper > * {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-.jsdraw--svgWrapper:hover .jsdraw--editButton,
-.jsdraw--svgWrapper:focus .jsdraw--editButton,
-.jsdraw--svgWrapper:focus-within .jsdraw--editButton,
-.jsdraw--editButton:focus {
-  display: block;
-}</style><style>pre code.hljs {
+						<style>pre code.hljs {
   display: block;
   overflow-x: auto;
   padding: 1em;
@@ -384,7 +360,7 @@ hue-6-2: #c18401
 		}
 
 		.jop-tinymce table tr:nth-child(even),
-		table tr:nth-child(even) {
+		table:has(thead) tr:nth-child(even) {
 			background-color: rgb(247, 247, 247);
 		}
 
@@ -554,6 +530,22 @@ hue-6-2: #c18401
 		}
 	
 
+				.joplin-frontmatter-rendered {
+					margin-bottom: 1em;
+				}
+				.joplin-frontmatter-rendered pre.hljs {
+					margin: 0;
+					border-radius: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+				}
+				.joplin-frontmatter-marker {
+					margin: 0;
+					border: none;
+					border-top: 2px solid var(--joplin-divider-color, #ccc);
+				}
+			
+
 				/*
 					FOR THE MARKDOWN EDITOR
 				*/
@@ -597,6 +589,142 @@ hue-6-2: #c18401
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
+
+				.fountain {
+					font-family: monospace;
+					line-height: 107%;
+					max-width: 1000px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.fountain .title-page,
+				.fountain .page {
+					padding: 1em 2em;
+					margin-bottom: 2em;
+				}
+
+				.fountain .title-page {
+					border-bottom: 1px solid #dddddd;
+				}
+
+				@media print {
+					.fountain .title-page,
+					.fountain .page {
+						page-break-after: always;
+					}
+
+					.fountain .title-page {
+						border-bottom: none;
+					}
+				}
+
+				.fountain hr {
+					border: none;
+					border-top: 1px solid #dddddd;
+					margin: 2em 0;
+				}
+
+				.fountain h1,
+				.fountain h2,
+				.fountain h3,
+				.fountain h4,
+				.fountain p {
+					font-weight: normal;
+					line-height: 107%;
+					margin: 1em 0;
+					border: none;
+					font-size: 1em;
+				}
+
+				.fountain .bold {
+					font-weight: bold;
+				}
+
+				.fountain .italic {
+					font-style: italic;
+				}
+
+				.fountain .underline {
+					text-decoration: underline;
+				}
+
+				.fountain .centered {
+					text-align: center;
+				}
+
+				.fountain h2 {
+					text-align: right;
+				}
+
+				.fountain .dialogue p.parenthetical {
+					margin-left: 11%;
+				}
+
+				.fountain .title-page .credit,
+				.fountain .title-page .authors,
+				.fountain .title-page .source {
+					text-align: center;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .title-page .source {
+					margin-top: 1.5em;
+				}
+
+				.fountain .title-page .notes {
+					text-align: right;
+					margin: 3em 0;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .dialogue {
+					margin-left: 3em;
+					margin-right: 3em;
+					margin-bottom: 1em;
+				}
+
+				.fountain .dialogue p,
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					margin: 0;
+				}
+
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					text-align: center;
+				}
+
+				.abc-notation-block svg {
+					background-color: white;
+				}
+				.joplin-abc-notation-rendered {
+					overflow-x: auto !important;
+					overflow-y: hidden;
+				}
+				@media print {
+					.joplin-abc-notation-rendered {
+						overflow: visible !important;
+					}
+
+					.joplin-abc-notation-rendered svg {
+						max-width: 100% !important;
+						height: auto !important;
+					}
+				}
+			
 .mermaid { width: 640px; }
 pre.mermaid[data-processed=true] { white-space: unset; }
 .mermaid-export-graph {
@@ -611,7 +739,17 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 				}
 				.mermaid-export-graph > button:hover {
 					background-color: #CBDAF1 !important;
-				}</style><div id="rendered-md"><h1 id="running-any-software">Running Any Software</h1>
+				}
+
+				.joplin-youtube-player-rendered {
+					width: 100%;
+					max-width: 100%;
+				}
+				.joplin-youtube-player-rendered iframe {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			</style><div id="rendered-md"><h1 id="running-any-software">Running Any Software</h1>
 <p>In Linux/Unix, there is no &ldquo;Windows Registry&rdquo; or &ldquo;add/remove programs&rdquo; to keep track of where the programs are located, where to put shortcuts, or what files, libraries, or other dependencies are required.</p>
 <p>To run any software, you can obtain the <strong>software source</strong> code and compile it on your system to generate the executable binary, or you can obtain the <strong>pre-compiled binary</strong> for your system architecture. Then you can run the executable directly on your system from anywhere<br/>
 that the user has execute permission. You can <code class="inline-code">chmod</code> and add execute (<code class="inline-code">+x</code>)  permission on any file that you have write access to.</p>
@@ -664,13 +802,13 @@ Sandboxed packages suitable for servers:</li>
 <p>All APT configurations are located under <code class="inline-code">/etc/apt</code>. The files containing the definition of package repositories are located under the <code class="inline-code">/etc/apt/sources.list.d</code> directory. You can add or remove repositories by adding and modifying <code class="inline-code">.list</code> and <code class="inline-code">.sources</code> files in the directory.<br/>
 As of APT version 3.0, which is included with Ubuntu 24.04 and newer, <code class="inline-code">.sources</code> files are being used, and the use of <code class="inline-code">.list</code> files is being deprecated.<br/>
 Here is an example of a Microsoft VS Code repository for Linux in both formats. Please note that VS Code is a GUI tool and is not intended to be installed on a server:</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="" data-joplin-source-open="```
 " data-joplin-source-close="
 ```"># Microsoft VS Code (the old &quot;vscode.list&quot; file)
 deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/code stable main</pre><pre class="hljs"><code><span class="hljs-comment"># Microsoft VS Code (the old &quot;vscode.list&quot; file)</span>
 deb [arch=amd64 signed-by=<span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/keyrings/</span>vscode.gpg] https:<span class="hljs-regexp">//</span>packages.microsoft.com<span class="hljs-regexp">/repos/</span>code stable main</code></pre></div>
 <p>Same repository definition converted to the new <code class="inline-code">.sources</code> format:</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="" data-joplin-source-open="```
 " data-joplin-source-close="
 ```">### THIS FILE IS AUTOMATICALLY CONFIGURED ###
 # The new &quot;vscode.sources&quot; file

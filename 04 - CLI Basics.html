@@ -4,31 +4,7 @@
 					<head>
 						<meta charset="UTF-8"/>
 						<meta name="viewport" content="width=device-width, initial-scale=1"/>
-						<style>.jsdraw--editButton {
-  display: none;
-  width: min-content;
-  max-height: 50px;
-  z-index: 1;
-  opacity: 0.9;
-  align-self: flex-end;
-  justify-self: right;
-}
-
-.jsdraw--svgWrapper {
-  display: inline-grid;
-}
-
-.jsdraw--svgWrapper > * {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-.jsdraw--svgWrapper:hover .jsdraw--editButton,
-.jsdraw--svgWrapper:focus .jsdraw--editButton,
-.jsdraw--svgWrapper:focus-within .jsdraw--editButton,
-.jsdraw--editButton:focus {
-  display: block;
-}</style><style>pre code.hljs {
+						<style>pre code.hljs {
   display: block;
   overflow-x: auto;
   padding: 1em;
@@ -180,14 +156,13 @@ hue-6-2: #c18401
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
-			border-radius: 5px;
+			background: rgba(50, 55, 63, 0.54); 
 		}
 		::-webkit-scrollbar-track:hover {
 			background: rgba(0, 0, 0, 0.1); 
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(50, 55, 63, 0.63); 
 		}
 
 		
@@ -268,6 +243,16 @@ hue-6-2: #c18401
 		li p {
 			margin-top: 0.2em;
 			margin-bottom: 0;
+		}
+
+		dt {
+			font-weight: bold;
+			margin-bottom: 0.25em;
+		}
+
+		dd {
+			margin-inline-start: 2.5em;
+			margin-bottom: 0.5em;
 		}
 
 		.resource-icon {
@@ -375,7 +360,7 @@ hue-6-2: #c18401
 		}
 
 		.jop-tinymce table tr:nth-child(even),
-		table tr:nth-child(even) {
+		table:has(thead) tr:nth-child(even) {
 			background-color: rgb(247, 247, 247);
 		}
 
@@ -545,6 +530,22 @@ hue-6-2: #c18401
 		}
 	
 
+				.joplin-frontmatter-rendered {
+					margin-bottom: 1em;
+				}
+				.joplin-frontmatter-rendered pre.hljs {
+					margin: 0;
+					border-radius: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+				}
+				.joplin-frontmatter-marker {
+					margin: 0;
+					border: none;
+					border-top: 2px solid var(--joplin-divider-color, #ccc);
+				}
+			
+
 				/*
 					FOR THE MARKDOWN EDITOR
 				*/
@@ -588,6 +589,142 @@ hue-6-2: #c18401
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
+
+				.fountain {
+					font-family: monospace;
+					line-height: 107%;
+					max-width: 1000px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.fountain .title-page,
+				.fountain .page {
+					padding: 1em 2em;
+					margin-bottom: 2em;
+				}
+
+				.fountain .title-page {
+					border-bottom: 1px solid #dddddd;
+				}
+
+				@media print {
+					.fountain .title-page,
+					.fountain .page {
+						page-break-after: always;
+					}
+
+					.fountain .title-page {
+						border-bottom: none;
+					}
+				}
+
+				.fountain hr {
+					border: none;
+					border-top: 1px solid #dddddd;
+					margin: 2em 0;
+				}
+
+				.fountain h1,
+				.fountain h2,
+				.fountain h3,
+				.fountain h4,
+				.fountain p {
+					font-weight: normal;
+					line-height: 107%;
+					margin: 1em 0;
+					border: none;
+					font-size: 1em;
+				}
+
+				.fountain .bold {
+					font-weight: bold;
+				}
+
+				.fountain .italic {
+					font-style: italic;
+				}
+
+				.fountain .underline {
+					text-decoration: underline;
+				}
+
+				.fountain .centered {
+					text-align: center;
+				}
+
+				.fountain h2 {
+					text-align: right;
+				}
+
+				.fountain .dialogue p.parenthetical {
+					margin-left: 11%;
+				}
+
+				.fountain .title-page .credit,
+				.fountain .title-page .authors,
+				.fountain .title-page .source {
+					text-align: center;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .title-page .source {
+					margin-top: 1.5em;
+				}
+
+				.fountain .title-page .notes {
+					text-align: right;
+					margin: 3em 0;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .dialogue {
+					margin-left: 3em;
+					margin-right: 3em;
+					margin-bottom: 1em;
+				}
+
+				.fountain .dialogue p,
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					margin: 0;
+				}
+
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					text-align: center;
+				}
+
+				.abc-notation-block svg {
+					background-color: white;
+				}
+				.joplin-abc-notation-rendered {
+					overflow-x: auto !important;
+					overflow-y: hidden;
+				}
+				@media print {
+					.joplin-abc-notation-rendered {
+						overflow: visible !important;
+					}
+
+					.joplin-abc-notation-rendered svg {
+						max-width: 100% !important;
+						height: auto !important;
+					}
+				}
+			
 .mermaid { width: 640px; }
 pre.mermaid[data-processed=true] { white-space: unset; }
 .mermaid-export-graph {
@@ -602,7 +739,17 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 				}
 				.mermaid-export-graph > button:hover {
 					background-color: #CBDAF1 !important;
-				}</style><div id="rendered-md"><p>CLI commands are generally typed in this format: <code class="inline-code">&lt;command&gt; &lt;options&gt; &lt;arguments&gt;</code>. The options (or flags) usually start with <code class="inline-code">-</code>.<br/>
+				}
+
+				.joplin-youtube-player-rendered {
+					width: 100%;
+					max-width: 100%;
+				}
+				.joplin-youtube-player-rendered iframe {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			</style><div id="rendered-md"><p>CLI commands are generally typed in this format: <code class="inline-code">&lt;command&gt; &lt;options&gt; &lt;arguments&gt;</code>. The options (or flags) usually start with <code class="inline-code">-</code>.<br/>
 Example: <code class="inline-code">ls -l /boot</code> (<code class="inline-code">ls</code> is the utility or command, <code class="inline-code">-l</code> is the flag for &quot;use a long listing format&quot;, and argument is the provided path <code class="inline-code">/boot</code> )</p>
 <h1 id="help-and-documentation">Help and Documentation</h1>
 <p>Basic information about a command or utility can be obtained using the following methods:</p>
@@ -612,7 +759,7 @@ Example: <code class="inline-code">ls -l /boot</code> (<code class="inline-code"
 <li>For more detailed help read the manual (man pages)<br/>
 Example:</li>
 </ul>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="bash" data-joplin-source-open="```bash
 " data-joplin-source-close="
 ```">user@system: ls --help
 Usage: ls [OPTION]... [FILE]...
@@ -688,7 +835,7 @@ In Linux and most Unix systems, the &ldquo;man pages&rdquo; are now software doc
 </table>
 </div>
 <p>The following are example commands to access the manpages for specific commands or configuration files:</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cli" data-joplin-source-open="```cli
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="cli" data-joplin-source-open="```cli
 " data-joplin-source-close="
 ```">user@hostmane:~$ man &lt;command&gt;
 user@hostname:~$ man &lt;section number&gt; &lt;command&gt;
@@ -706,7 +853,7 @@ ls (<span class="hljs-number">1</span>)           - list directory contents
 user<span class="hljs-variable">@hostname</span><span class="hljs-symbol">:~</span><span class="hljs-variable">$ </span>whatis grep
 grep (<span class="hljs-number">1</span>)         - print lines matching a pattern</code></pre></div>
 <p>Examples:</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="" data-joplin-source-open="```
 " data-joplin-source-close="
 ```">user@hostname:~$ man passwd 
 #   notice, by default the item from chapter 1 is displayed
@@ -762,7 +909,7 @@ Typical file types in a Unix/Linux filesystem are:</p>
 <li>A directory is just a special file that contains a list of files that are inside the directory</li>
 </ul>
 <p>Here is an example output of <code class="inline-code">ls -l</code>. can you tell which file is a directory, and which one is a link? (hint: look at the very first character on each line!)</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="" data-joplin-source-open="```
 " data-joplin-source-close="
 ```">user@hostname:~$ ls -l /boot
 total 175172
@@ -821,7 +968,7 @@ lrwxrwxrwx<span class="hljs-number"> 1 </span>root root      <span class="hljs-n
 <li><code class="inline-code">grep</code></li>
 <li><code class="inline-code">echo</code></li>
 </ul>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="" data-joplin-source-open="```
 " data-joplin-source-close="
 ```">user@hostname:~$ whatis more
 more (1)             - file perusal filter for crt viewing
@@ -873,8 +1020,6 @@ echo (<span class="hljs-number">1</span>)             - display a line of text</
 </ul>
 </li>
 </ul>
-<hr/>
-<p>Github Main Page: <a data-from-md="" title="https://gorbehnare.github.io/Introduction-to-Linux/" href="https://gorbehnare.github.io/Introduction-to-Linux/">https://gorbehnare.github.io/Introduction-to-Linux/</a></p>
 </div></div>
 					</body>
 				</html>

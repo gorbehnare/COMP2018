@@ -4,31 +4,7 @@
 					<head>
 						<meta charset="UTF-8"/>
 						<meta name="viewport" content="width=device-width, initial-scale=1"/>
-						<style>.jsdraw--editButton {
-  display: none;
-  width: min-content;
-  max-height: 50px;
-  z-index: 1;
-  opacity: 0.9;
-  align-self: flex-end;
-  justify-self: right;
-}
-
-.jsdraw--svgWrapper {
-  display: inline-grid;
-}
-
-.jsdraw--svgWrapper > * {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-.jsdraw--svgWrapper:hover .jsdraw--editButton,
-.jsdraw--svgWrapper:focus .jsdraw--editButton,
-.jsdraw--svgWrapper:focus-within .jsdraw--editButton,
-.jsdraw--editButton:focus {
-  display: block;
-}</style><style>pre code.hljs {
+						<style>pre code.hljs {
   display: block;
   overflow-x: auto;
   padding: 1em;
@@ -384,7 +360,7 @@ hue-6-2: #c18401
 		}
 
 		.jop-tinymce table tr:nth-child(even),
-		table tr:nth-child(even) {
+		table:has(thead) tr:nth-child(even) {
 			background-color: rgb(247, 247, 247);
 		}
 
@@ -554,6 +530,22 @@ hue-6-2: #c18401
 		}
 	
 
+				.joplin-frontmatter-rendered {
+					margin-bottom: 1em;
+				}
+				.joplin-frontmatter-rendered pre.hljs {
+					margin: 0;
+					border-radius: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+				}
+				.joplin-frontmatter-marker {
+					margin: 0;
+					border: none;
+					border-top: 2px solid var(--joplin-divider-color, #ccc);
+				}
+			
+
 				/*
 					FOR THE MARKDOWN EDITOR
 				*/
@@ -597,6 +589,142 @@ hue-6-2: #c18401
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
+
+				.fountain {
+					font-family: monospace;
+					line-height: 107%;
+					max-width: 1000px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.fountain .title-page,
+				.fountain .page {
+					padding: 1em 2em;
+					margin-bottom: 2em;
+				}
+
+				.fountain .title-page {
+					border-bottom: 1px solid #dddddd;
+				}
+
+				@media print {
+					.fountain .title-page,
+					.fountain .page {
+						page-break-after: always;
+					}
+
+					.fountain .title-page {
+						border-bottom: none;
+					}
+				}
+
+				.fountain hr {
+					border: none;
+					border-top: 1px solid #dddddd;
+					margin: 2em 0;
+				}
+
+				.fountain h1,
+				.fountain h2,
+				.fountain h3,
+				.fountain h4,
+				.fountain p {
+					font-weight: normal;
+					line-height: 107%;
+					margin: 1em 0;
+					border: none;
+					font-size: 1em;
+				}
+
+				.fountain .bold {
+					font-weight: bold;
+				}
+
+				.fountain .italic {
+					font-style: italic;
+				}
+
+				.fountain .underline {
+					text-decoration: underline;
+				}
+
+				.fountain .centered {
+					text-align: center;
+				}
+
+				.fountain h2 {
+					text-align: right;
+				}
+
+				.fountain .dialogue p.parenthetical {
+					margin-left: 11%;
+				}
+
+				.fountain .title-page .credit,
+				.fountain .title-page .authors,
+				.fountain .title-page .source {
+					text-align: center;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .title-page .source {
+					margin-top: 1.5em;
+				}
+
+				.fountain .title-page .notes {
+					text-align: right;
+					margin: 3em 0;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .dialogue {
+					margin-left: 3em;
+					margin-right: 3em;
+					margin-bottom: 1em;
+				}
+
+				.fountain .dialogue p,
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					margin: 0;
+				}
+
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					text-align: center;
+				}
+
+				.abc-notation-block svg {
+					background-color: white;
+				}
+				.joplin-abc-notation-rendered {
+					overflow-x: auto !important;
+					overflow-y: hidden;
+				}
+				@media print {
+					.joplin-abc-notation-rendered {
+						overflow: visible !important;
+					}
+
+					.joplin-abc-notation-rendered svg {
+						max-width: 100% !important;
+						height: auto !important;
+					}
+				}
+			
 .mermaid { width: 640px; }
 pre.mermaid[data-processed=true] { white-space: unset; }
 .mermaid-export-graph {
@@ -611,7 +739,17 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 				}
 				.mermaid-export-graph > button:hover {
 					background-color: #CBDAF1 !important;
-				}</style><div id="rendered-md"><p>Linux is only a kernel, and does not include any other software, including any shells or utilities. A Linux OS is a bundle of the Linux kernel with other software that makes that operating system fit for purpose. This flexibility allows the Linux kernel to be used for running many small and large systems, from smartphones to cars, farming equipment and space vehicles. The bash CLI shell is not the only available shell; one can simply install other shells as desired. The same applies to graphical user interfaces. When a graphical interface is needed on a system, you simply install one. For this topic, we are focusing on the fundamentals rather than specific software. This will help you understand the terminology and GUI requirements rather than focusing on aesthetics.</p>
+				}
+
+				.joplin-youtube-player-rendered {
+					width: 100%;
+					max-width: 100%;
+				}
+				.joplin-youtube-player-rendered iframe {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			</style><div id="rendered-md"><p>Linux is only a kernel, and does not include any other software, including any shells or utilities. A Linux OS is a bundle of the Linux kernel with other software that makes that operating system fit for purpose. This flexibility allows the Linux kernel to be used for running many small and large systems, from smartphones to cars, farming equipment and space vehicles. The bash CLI shell is not the only available shell; one can simply install other shells as desired. The same applies to graphical user interfaces. When a graphical interface is needed on a system, you simply install one. For this topic, we are focusing on the fundamentals rather than specific software. This will help you understand the terminology and GUI requirements rather than focusing on aesthetics.</p>
 <h1 id="graphical-user-interface-stack">Graphical User Interface Stack</h1>
 <p>For a more detailed explanation, see the <a data-from-md="" title="https://en.wikipedia.org/wiki/Windowing_system" href="https://en.wikipedia.org/wiki/Windowing_system">Wikipedia Article on Windowing System</a>.</p>
 <p>The GUI stack has several components:</p>

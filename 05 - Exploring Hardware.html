@@ -1,10 +1,113 @@
 
-				<!DOCTYPE html>
+				
 				<html>
 					<head>
-						<meta charset="UTF-8">
-						<meta name="viewport" content="width=device-width, initial-scale=1" />
-						<link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
+						<meta charset="UTF-8"/>
+						<meta name="viewport" content="width=device-width, initial-scale=1"/>
+						<style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}</style>
 						<title>05 - Exploring Hardware</title>
 					</head>
 					<body>
@@ -34,9 +137,17 @@
 			border-radius: 3px;
 			background-color: rgb(243, 243, 243);
 		}
+
+		:root {
+			--scrollbar-size: 7px;
+		}
+
 		::-webkit-scrollbar {
-			width: 7px;
-			height: 7px;
+			width: var(--scrollbar-size);
+			height: var(--scrollbar-size);
+		}
+		::-webkit-scrollbar-thumb {
+			border-radius: calc(var(--scrollbar-size) / 2);
 		}
 		::-webkit-scrollbar-corner {
 			background: none;
@@ -45,14 +156,13 @@
 			border: none;
 		}
 		::-webkit-scrollbar-thumb {
-			background: rgba(100, 100, 100, 0.3); 
-			border-radius: 5px;
+			background: rgba(50, 55, 63, 0.54); 
 		}
 		::-webkit-scrollbar-track:hover {
 			background: rgba(0, 0, 0, 0.1); 
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: rgba(100, 100, 100, 0.7); 
+			background: rgba(50, 55, 63, 0.63); 
 		}
 
 		
@@ -133,6 +243,16 @@
 		li p {
 			margin-top: 0.2em;
 			margin-bottom: 0;
+		}
+
+		dt {
+			font-weight: bold;
+			margin-bottom: 0.25em;
+		}
+
+		dd {
+			margin-inline-start: 2.5em;
+			margin-bottom: 0.5em;
 		}
 
 		.resource-icon {
@@ -240,7 +360,7 @@
 		}
 
 		.jop-tinymce table tr:nth-child(even),
-		table tr:nth-child(even) {
+		table:has(thead) tr:nth-child(even) {
 			background-color: rgb(247, 247, 247);
 		}
 
@@ -274,24 +394,26 @@
 			color: black;
 		}
 
-		.not-loaded-resource img {
-			width: 1.15em;
-			height: 1.15em;
-			background: white;
-			padding: 2px !important;
-			border-radius: 2px;
-			box-shadow: 0 1px 3px #000000aa;
-		}
+		
+	.not-loaded-resource img {
+		width: 1.15em;
+		height: 1.15em;
+		background: white;
+		padding: 2px !important;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px #000000aa;
+	}
 
-		a.not-loaded-resource img {
-			margin-right: .2em;
-		}
+	a.not-loaded-resource img {
+		margin-right: .2em;
+	}
 
-		a.not-loaded-resource {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
+	a.not-loaded-resource {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
 
 		.md-checkbox input[type=checkbox]:checked {
 			opacity: 0.7;
@@ -408,6 +530,22 @@
 		}
 	
 
+				.joplin-frontmatter-rendered {
+					margin-bottom: 1em;
+				}
+				.joplin-frontmatter-rendered pre.hljs {
+					margin: 0;
+					border-radius: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+				}
+				.joplin-frontmatter-marker {
+					margin: 0;
+					border: none;
+					border-top: 2px solid var(--joplin-divider-color, #ccc);
+				}
+			
+
 				/*
 					FOR THE MARKDOWN EDITOR
 				*/
@@ -423,6 +561,8 @@
 				li.md-checkbox input[type=checkbox] {
 					margin-left: -1.71em;
 					margin-right: 0.7em;
+					position: relative;
+					top: 1px;
 				}
 				
 				ul.joplin-checklist {
@@ -449,8 +589,144 @@
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
+
+				.fountain {
+					font-family: monospace;
+					line-height: 107%;
+					max-width: 1000px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.fountain .title-page,
+				.fountain .page {
+					padding: 1em 2em;
+					margin-bottom: 2em;
+				}
+
+				.fountain .title-page {
+					border-bottom: 1px solid #dddddd;
+				}
+
+				@media print {
+					.fountain .title-page,
+					.fountain .page {
+						page-break-after: always;
+					}
+
+					.fountain .title-page {
+						border-bottom: none;
+					}
+				}
+
+				.fountain hr {
+					border: none;
+					border-top: 1px solid #dddddd;
+					margin: 2em 0;
+				}
+
+				.fountain h1,
+				.fountain h2,
+				.fountain h3,
+				.fountain h4,
+				.fountain p {
+					font-weight: normal;
+					line-height: 107%;
+					margin: 1em 0;
+					border: none;
+					font-size: 1em;
+				}
+
+				.fountain .bold {
+					font-weight: bold;
+				}
+
+				.fountain .italic {
+					font-style: italic;
+				}
+
+				.fountain .underline {
+					text-decoration: underline;
+				}
+
+				.fountain .centered {
+					text-align: center;
+				}
+
+				.fountain h2 {
+					text-align: right;
+				}
+
+				.fountain .dialogue p.parenthetical {
+					margin-left: 11%;
+				}
+
+				.fountain .title-page .credit,
+				.fountain .title-page .authors,
+				.fountain .title-page .source {
+					text-align: center;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .title-page .source {
+					margin-top: 1.5em;
+				}
+
+				.fountain .title-page .notes {
+					text-align: right;
+					margin: 3em 0;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .dialogue {
+					margin-left: 3em;
+					margin-right: 3em;
+					margin-bottom: 1em;
+				}
+
+				.fountain .dialogue p,
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					margin: 0;
+				}
+
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					text-align: center;
+				}
+
+				.abc-notation-block svg {
+					background-color: white;
+				}
+				.joplin-abc-notation-rendered {
+					overflow-x: auto !important;
+					overflow-y: hidden;
+				}
+				@media print {
+					.joplin-abc-notation-rendered {
+						overflow: visible !important;
+					}
+
+					.joplin-abc-notation-rendered svg {
+						max-width: 100% !important;
+						height: auto !important;
+					}
+				}
+			
 .mermaid { width: 640px; }
-pre.mermaid > svg { white-space: unset; }
+pre.mermaid[data-processed=true] { white-space: unset; }
 .mermaid-export-graph {
 					opacity: 0;
 					height: 0;
@@ -463,8 +739,18 @@ pre.mermaid > svg { white-space: unset; }
 				}
 				.mermaid-export-graph > button:hover {
 					background-color: #CBDAF1 !important;
-				}</style><div id="rendered-md"><h1 id="device-files-under-dev">Device Files under /dev</h1>
-<p>On an Linux system navigate to <code class="inline-code">/dev</code> directory using <code class="inline-code">cd /dev</code> and list all files using <code class="inline-code">ls -la</code>.<br>
+				}
+
+				.joplin-youtube-player-rendered {
+					width: 100%;
+					max-width: 100%;
+				}
+				.joplin-youtube-player-rendered iframe {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			</style><div id="rendered-md"><h1 id="device-files-under-dev">Device Files under /dev</h1>
+<p>On an Linux system navigate to <code class="inline-code">/dev</code> directory using <code class="inline-code">cd /dev</code> and list all files using <code class="inline-code">ls -la</code>.<br/>
 What file types do you see?</p>
 <ul>
 <li><code class="inline-code">-</code> : regular file</li>
@@ -476,7 +762,7 @@ What file types do you see?</p>
 <li><code class="inline-code">l</code> : symbolic link</li>
 </ul>
 <h1 id="storage">Storage</h1>
-<p>Lookup the following utilities in the man pages: <code class="inline-code">lsblk</code> and <code class="inline-code">fdisk</code><br>
+<p>Lookup the following utilities in the man pages: <code class="inline-code">lsblk</code> and <code class="inline-code">fdisk</code><br/>
 Use <code class="inline-code">lsblk</code> and <code class="inline-code">fdisk -l</code> to look for the following information:</p>
 <ul>
 <li>How many physical disks are attached to your system?</li>
@@ -489,13 +775,13 @@ Use <code class="inline-code">lsblk</code> and <code class="inline-code">fdisk -
 </li>
 </ul>
 <h1 id="filesystem">Filesystem</h1>
-<p>To format a volume using a filesystem format (such as <code class="inline-code">ext4</code>, <code class="inline-code">btrfs</code>, <code class="inline-code">FAT</code>, and <code class="inline-code">exFAT</code>) lookup the following utility in man pages: <code class="inline-code">mkfs</code><br>
+<p>To format a volume using a filesystem format (such as <code class="inline-code">ext4</code>, <code class="inline-code">btrfs</code>, <code class="inline-code">FAT</code>, and <code class="inline-code">exFAT</code>) lookup the following utility in man pages: <code class="inline-code">mkfs</code><br/>
 To get reports on your existing filesystems lookup and try the following utilities:</p>
 <ul>
 <li><code class="inline-code">df</code></li>
 <li><code class="inline-code">du</code></li>
 </ul>
-<p>Can you find out how much free space you have left in your filesystem?<br>
+<p>Can you find out how much free space you have left in your filesystem?<br/>
 Can you figure out how big are the files inside your home directory and how much space is being consumed in total by your home directory?</p>
 <h2 id="multiple-filesystems">Multiple Filesystems</h2>
 <p>Configuration files <code class="inline-code">/etc/fstab</code> specifies the disks and filesystems to be mounted on startup. Mount-point and other attributes can be specified in this file.</p>
@@ -519,8 +805,6 @@ Can you figure out how big are the files inside your home directory and how much
 <li><code class="inline-code">lscpu</code></li>
 <li><code class="inline-code">lsblk</code> (note: blk stands for &quot;block&quot; storage)</li>
 </ul>
-<hr>
-<p>Github Main Page: <a data-from-md title='https://gorbehnare.github.io/Introduction-to-Linux/' href='https://gorbehnare.github.io/Introduction-to-Linux/'>https://gorbehnare.github.io/Introduction-to-Linux/</a></p>
 </div></div>
 					</body>
 				</html>

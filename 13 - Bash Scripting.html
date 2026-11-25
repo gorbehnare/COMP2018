@@ -4,31 +4,7 @@
 					<head>
 						<meta charset="UTF-8"/>
 						<meta name="viewport" content="width=device-width, initial-scale=1"/>
-						<style>.jsdraw--editButton {
-  display: none;
-  width: min-content;
-  max-height: 50px;
-  z-index: 1;
-  opacity: 0.9;
-  align-self: flex-end;
-  justify-self: right;
-}
-
-.jsdraw--svgWrapper {
-  display: inline-grid;
-}
-
-.jsdraw--svgWrapper > * {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-.jsdraw--svgWrapper:hover .jsdraw--editButton,
-.jsdraw--svgWrapper:focus .jsdraw--editButton,
-.jsdraw--svgWrapper:focus-within .jsdraw--editButton,
-.jsdraw--editButton:focus {
-  display: block;
-}</style><style>pre code.hljs {
+						<style>pre code.hljs {
   display: block;
   overflow-x: auto;
   padding: 1em;
@@ -384,7 +360,7 @@ hue-6-2: #c18401
 		}
 
 		.jop-tinymce table tr:nth-child(even),
-		table tr:nth-child(even) {
+		table:has(thead) tr:nth-child(even) {
 			background-color: rgb(247, 247, 247);
 		}
 
@@ -554,6 +530,22 @@ hue-6-2: #c18401
 		}
 	
 
+				.joplin-frontmatter-rendered {
+					margin-bottom: 1em;
+				}
+				.joplin-frontmatter-rendered pre.hljs {
+					margin: 0;
+					border-radius: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+				}
+				.joplin-frontmatter-marker {
+					margin: 0;
+					border: none;
+					border-top: 2px solid var(--joplin-divider-color, #ccc);
+				}
+			
+
 				/*
 					FOR THE MARKDOWN EDITOR
 				*/
@@ -597,6 +589,142 @@ hue-6-2: #c18401
 				.joplin-checklist li:not(.checked)::before {
 					content:"\f0c8";
 				}
+
+				.fountain {
+					font-family: monospace;
+					line-height: 107%;
+					max-width: 1000px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.fountain .title-page,
+				.fountain .page {
+					padding: 1em 2em;
+					margin-bottom: 2em;
+				}
+
+				.fountain .title-page {
+					border-bottom: 1px solid #dddddd;
+				}
+
+				@media print {
+					.fountain .title-page,
+					.fountain .page {
+						page-break-after: always;
+					}
+
+					.fountain .title-page {
+						border-bottom: none;
+					}
+				}
+
+				.fountain hr {
+					border: none;
+					border-top: 1px solid #dddddd;
+					margin: 2em 0;
+				}
+
+				.fountain h1,
+				.fountain h2,
+				.fountain h3,
+				.fountain h4,
+				.fountain p {
+					font-weight: normal;
+					line-height: 107%;
+					margin: 1em 0;
+					border: none;
+					font-size: 1em;
+				}
+
+				.fountain .bold {
+					font-weight: bold;
+				}
+
+				.fountain .italic {
+					font-style: italic;
+				}
+
+				.fountain .underline {
+					text-decoration: underline;
+				}
+
+				.fountain .centered {
+					text-align: center;
+				}
+
+				.fountain h2 {
+					text-align: right;
+				}
+
+				.fountain .dialogue p.parenthetical {
+					margin-left: 11%;
+				}
+
+				.fountain .title-page .credit,
+				.fountain .title-page .authors,
+				.fountain .title-page .source {
+					text-align: center;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .title-page .source {
+					margin-top: 1.5em;
+				}
+
+				.fountain .title-page .notes {
+					text-align: right;
+					margin: 3em 0;
+				}
+
+				.fountain .title-page h1 {
+					margin-bottom: 1.5em;
+					text-align: center;
+				}
+
+				.fountain .dialogue {
+					margin-left: 3em;
+					margin-right: 3em;
+					margin-bottom: 1em;
+				}
+
+				.fountain .dialogue p,
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					margin: 0;
+				}
+
+				.fountain .dialogue h1,
+				.fountain .dialogue h2,
+				.fountain .dialogue h3,
+				.fountain .dialogue h4 {
+					text-align: center;
+				}
+
+				.abc-notation-block svg {
+					background-color: white;
+				}
+				.joplin-abc-notation-rendered {
+					overflow-x: auto !important;
+					overflow-y: hidden;
+				}
+				@media print {
+					.joplin-abc-notation-rendered {
+						overflow: visible !important;
+					}
+
+					.joplin-abc-notation-rendered svg {
+						max-width: 100% !important;
+						height: auto !important;
+					}
+				}
+			
 .mermaid { width: 640px; }
 pre.mermaid[data-processed=true] { white-space: unset; }
 .mermaid-export-graph {
@@ -611,7 +739,17 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 				}
 				.mermaid-export-graph > button:hover {
 					background-color: #CBDAF1 !important;
-				}</style><div id="rendered-md"><p>Bash scripts are plain text files that contain a list of bash commands. They are widely used and extremely useful. They can be used for a wide range of purposes, from simplifying complex tasks to automating repetitive tasks.</p>
+				}
+
+				.joplin-youtube-player-rendered {
+					width: 100%;
+					max-width: 100%;
+				}
+				.joplin-youtube-player-rendered iframe {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			</style><div id="rendered-md"><p>Bash scripts are plain text files that contain a list of bash commands. They are widely used and extremely useful. They can be used for a wide range of purposes, from simplifying complex tasks to automating repetitive tasks.</p>
 <h1 id="executing-files">Executing Files</h1>
 <p>A file is made executable by <code class="inline-code">chmod +x</code> for the appropriate user or group. Running an executable file is as simple as calling the name of the file in the shell using an absolute or relative path (for example: <code class="inline-code">./script.sh</code>).</p>
 <p>A file can also be executed without having the execute permissions, by passing it to a shell or other program to execute:</p>
@@ -652,7 +790,7 @@ There are a few more characters with special meaning:</li>
 <li>The pipe <code class="inline-code">|</code> character is used to redirect the <code class="inline-code">stdout</code> of the first command into the <code class="inline-code">stdin</code> of the next command<br/>
 An example of using exit status:</li>
 </ul>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="" data-joplin-source-open="```
 " data-joplin-source-close="
 ```">ls /path/to/some/file  # This is just an example to show how &apos;$?&apos; works
 if [ $? -eq 0 ] then   # Note: There are better ways of checking if a path exists without using &apos;ls&apos;!
@@ -696,7 +834,7 @@ fi</code></pre></div>
 <li><a data-from-md="" title="https://www.tecmint.com/set-unset-environment-variables-in-linux/" href="https://www.tecmint.com/set-unset-environment-variables-in-linux/">https://www.tecmint.com/set-unset-environment-variables-in-linux/</a></li>
 </ul>
 <p>To set a local variable, simply declare the variable name. In bash, the <code class="inline-code">$</code> is used to access the information stored inside a variable. Here is an example:</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="bash" data-joplin-source-open="```bash
 " data-joplin-source-close="
 ```">user@hostname:~$ Variable_name=value
 user@hostname:~$ echo &ldquo;The variable is set to $Variable_name&rdquo;
@@ -781,7 +919,7 @@ user@hostname:~$ whatis <span class="hljs-built_in">env</span>
 </table>
 </div>
 <p>The results of the comparisons are not sent to the <code class="inline-code">stdout</code>, and only an <code class="inline-code">exit status</code> is returned for <code class="inline-code">true=0</code> or <code class="inline-code">false=1</code>. In the terminal, you can get the exit status from the last command using <code class="inline-code">$?</code>.</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="bash" data-joplin-source-open="```bash
 " data-joplin-source-close="
 ```">user@hostname:~$ a=100
 user@hostname:~$ b=200
@@ -929,7 +1067,7 @@ user@hostname:~$ [ <span class="hljs-variable">$a</span> -gt <span class="hljs-v
 </tbody>
 </table>
 </div>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="bash" data-joplin-source-open="```bash
 " data-joplin-source-close="
 ```"># Example use of blocking special file, imaging into floppy disk (or SD Card, or whatever block storage media)
 if [ -b /dev/fd0 ]; then 
@@ -964,7 +1102,7 @@ fi</pre><pre class="hljs"><code><span class="hljs-comment"># Example use of bloc
 </ul>
 <h2 id="if-statement">If Statement</h2>
 <p>Here is the basic template for the <code class="inline-code">if</code> statement syntax:</p>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="bash" data-joplin-source-open="```bash
 " data-joplin-source-close="
 ```"># Using Single Brackets
 if [ conditions ]; then
@@ -1000,7 +1138,7 @@ fi</pre><pre class="hljs"><code><span class="hljs-comment"># Using Single Bracke
         do_more_stuff
 <span class="hljs-keyword">fi</span></code></pre></div>
 <h2 id="case-statement">Case Statement</h2>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```
+<div class="joplin-editable"><pre class="joplin-source" hidden="" data-joplin-language="" data-joplin-source-open="```
 " data-joplin-source-close="
 ```">case  $variable-name  in
    pattern1)       # $variable-name is compared to find a match
